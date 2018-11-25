@@ -1,1 +1,3 @@
-HI EECS !83
+Hey guys, this is Adam.
+Just wanted to create this file to make sure everything was working.
+Hope you are all having a great break!
