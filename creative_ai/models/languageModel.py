@@ -79,7 +79,12 @@ class LanguageModel():
                   (Remember that you wrote a function that checks if a model can
                   be used to pick a word for a sentence!)
         """
-        pass
+        if self.models[0].trainingDataHasNGram(self, sentence):
+            return TrigramModel
+        elif self.models[1].trainingDataHasNGram(self, sentence):
+            return BigramModel
+        else:
+            return UnigramModel
 
     def weightedChoice(self, candidates):
         """
@@ -89,7 +94,16 @@ class LanguageModel():
         Effects:  returns a candidate item (a key in the candidates dictionary)
                   based on the algorithm described in the spec.
         """
-        pass
+        cumulative = {}
+        temp_total = 0
+        for x in candidates:
+            temp_total += candidates[x]
+            cumulative[x] = temp_total
+
+        randy = random.randrange(1, temp_total)
+        for y in cumulative:
+            if randy > cumulative[y]:
+                return candidates[y]
 
 
     def getNextToken(self, sentence, filter=None):
@@ -106,7 +120,7 @@ class LanguageModel():
                   can produce a next token using the filter, then a random
                   token from the filter is returned instead.
         """
-        pass
+        select
 
 ###############################################################################
 # End Core
