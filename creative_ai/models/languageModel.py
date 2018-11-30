@@ -5,6 +5,7 @@ from creative_ai.models.bigramModel import BigramModel
 from creative_ai.models.trigramModel import TrigramModel
 from creative_ai.utils.print_helpers import key_value_pairs
 
+
 class LanguageModel():
 
     def __init__(self, models=None):
@@ -38,8 +39,8 @@ class LanguageModel():
         output_list = [
             '{} contains {} trained paths.'.format(
                 model.__class__.__name__, key_value_pairs(model.nGramCounts)
-                ) for model in self.models
-            ]
+            ) for model in self.models
+        ]
 
         output = '\n'.join(output_list)
 
@@ -62,10 +63,9 @@ class LanguageModel():
         for model in self.models:
             model.trainModel(text)
 
-
-###############################################################################
-# Begin Core >> FOR CORE IMPLEMENTION, DO NOT EDIT ABOVE OF THIS SECTION <<
-###############################################################################
+    ###############################################################################
+    # Begin Core >> FOR CORE IMPLEMENTION, DO NOT EDIT ABOVE OF THIS SECTION <<
+    ###############################################################################
 
     def selectNGramModel(self, sentence):
         """
@@ -105,7 +105,6 @@ class LanguageModel():
             if randy > cumulative[y]:
                 return candidates[y]
 
-
     def getNextToken(self, sentence, filter=None):
         """
         Requires: sentence is a list of strings, and this model can be used to
@@ -120,9 +119,9 @@ class LanguageModel():
                   can produce a next token using the filter, then a random
                   token from the filter is returned instead.
         """
-        type = selectNGramModel(sentence)
-        if filter == None:
-            return weightedChoice(type.getCandidateDictionary(sentence))
+        type = self.selectNGramModel(sentence)
+        if filter is None:
+            return self.weightedChoice(type.getCandidateDictionary(sentence))
         else:
             filteredCandidates = {}
             for i in type.getCandidateDictionary(sentence):
@@ -130,6 +129,7 @@ class LanguageModel():
                     filteredCandidates.update({i: type.getCandidateDictionary(sentence)[i]})
             if filteredCandidates == {}:
                 return random.choice(filter)
+
 
 ###############################################################################
 # End Core
@@ -140,4 +140,7 @@ class LanguageModel():
 ###############################################################################
 
 if __name__ == '__main__':
-    # test cases here
+    instance = LanguageModel
+    print(instance)
+    sentence = ["hello", "nice", "to", "meet", "you"]
+    type(instance.selectNGramModel(LanguageModel, sentence))
