@@ -43,7 +43,17 @@ class TrigramModel():
                   where those inner dictionaries have strings as keys
                   and dictionaries of {string: integer} pairs as values.
         """
-        pass
+
+        for sentences in text:
+            for i in range(len(sentence) - 2):
+                if (sentence[i] not in self.nGramCounts):
+                    self.nGramCounts[sentence[i]] = {}
+                if (sentence[i+1] not in self.nGramCounts[sentence[i]]):
+                    self.nGramCounts[sentence[i]][sentence[i+1]] = {}
+                if (sentence[i+2] not in self.nGramCounts[sentence[i]][sentence[i+1]]):
+                    self.nGramCounts[sentence[i]][sentence[i+1]][sentence[i+2]] = 1
+                elif (sentence[i+2] in self.nGramCounts[sentence[i]][sentence[i+1]]):
+                    self.nGramCounts[sentence[i]][sentence[i + 1]][sentence[i + 2]] += 1;
 
     def trainingDataHasNGram(self, sentence):
         """
@@ -53,7 +63,10 @@ class TrigramModel():
                   the next token for the sentence. For explanations of how this
                   is determined for the TrigramModel, see the spec.
         """
-        pass
+        if (sentence[-2] in self.nGramCounts):
+            return sentence[-1] in self.nGramCounts[sentence[-2]]
+        else:
+            return False
 
     def getCandidateDictionary(self, sentence):
         """
@@ -64,7 +77,7 @@ class TrigramModel():
                   to the current sentence. For details on which words the
                   TrigramModel sees as candidates, see the spec.
         """
-        pass
+        return self.nGramCounts[Sentence[-2]][Sentence[-1]]
 
 ###############################################################################
 # End Core
