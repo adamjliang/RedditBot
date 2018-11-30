@@ -120,7 +120,16 @@ class LanguageModel():
                   can produce a next token using the filter, then a random
                   token from the filter is returned instead.
         """
-        select
+        type = selectNGramModel(sentence)
+        if filter == None:
+            return weightedChoice(type.getCandidateDictionary(sentence))
+        else:
+            filteredCandidates = {}
+            for i in type.getCandidateDictionary(sentence):
+                if i == filter:
+                    filteredCandidates.update({i: type.getCandidateDictionary(sentence)[i]})
+            if filteredCandidates == {}:
+                return random.choice(filter)
 
 ###############################################################################
 # End Core
