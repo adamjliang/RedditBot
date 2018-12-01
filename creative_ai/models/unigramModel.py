@@ -40,7 +40,13 @@ class UnigramModel():
                   For further explanation of UnigramModel's version of
                   self.nGramCounts, see the spec.
         """
-        pass
+
+        for sentences[2:] in text:
+            for word in sentence:
+                if (word not in self.nGramCounts):
+                    self.nGramCounts[word] = 1
+                elif (word in self.nGramCounts):
+                    self.nGramCounts[word] += 1
 
     def trainingDataHasNGram(self, sentence):
         """
@@ -50,7 +56,7 @@ class UnigramModel():
                   the next token for the sentence. For explanations of how this
                   is determined for the UnigramModel, see the spec.
         """
-        pass
+        return not not self.nGramCounts
 
     def getCandidateDictionary(self, sentence):
         """
@@ -61,7 +67,7 @@ class UnigramModel():
                   to the current sentence. For details on which words the
                   UnigramModel sees as candidates, see the spec.
         """
-        pass
+        return self.nGramCounts
 
 ###############################################################################
 # End Core

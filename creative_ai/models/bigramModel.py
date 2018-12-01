@@ -41,7 +41,14 @@ class BigramModel():
                   which has strings as keys and dictionaries of
                   {string: integer} pairs as values.
         """
-        pass
+        for sentences in text:
+            for i in range(len(sentence) - 1):
+                if (sentence[i] not in self.nGramCounts):
+                    self.nGramCounts[sentence[i]] = {}
+                if (sentence[i+1] not in self.nGramCounts[sentence[i]]):
+                    self.nGramCounts[sentence[i]][sentence[i+1]] = 1
+                elif (sentence[i+1] in self.nGramCounts[sentence[i]]):
+                    self.nGramCounts[sentence[i]][sentence[i + 1]] += 1
 
     def trainingDataHasNGram(self, sentence):
         """
@@ -51,7 +58,8 @@ class BigramModel():
                   the next token for the sentence. For explanations of how this
                   is determined for the BigramModel, see the spec.
         """
-        pass
+        return sentence[-1] in self.nGramCounts
+
 
     def getCandidateDictionary(self, sentence):
         """
@@ -62,7 +70,7 @@ class BigramModel():
                   to the current sentence. For details on which words the
                   BigramModel sees as candidates, see the spec.
         """
-        pass
+        return self.nGramCounts[Sentence[-1]]
 
 ###############################################################################
 # End Core
@@ -73,4 +81,10 @@ class BigramModel():
 ###############################################################################
 
 if __name__ == '__main__':
-    # Add your test cases here
+    uni = BigramModel()
+
+    text = [ ['the', 'brown', 'fox'], ['the', 'lazy', 'dog'] ]
+    uni.trainModel(text)
+    # Should print: { 'brown': 2, 'dog': 1, 'fox': 1, 'lazy': 1, 'the': 2 }
+    print(uni)
+
