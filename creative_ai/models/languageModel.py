@@ -5,6 +5,7 @@ from creative_ai.models.bigramModel import BigramModel
 from creative_ai.models.trigramModel import TrigramModel
 from creative_ai.utils.print_helpers import key_value_pairs
 
+
 class LanguageModel():
 
     def __init__(self, models=None):
@@ -38,8 +39,8 @@ class LanguageModel():
         output_list = [
             '{} contains {} trained paths.'.format(
                 model.__class__.__name__, key_value_pairs(model.nGramCounts)
-                ) for model in self.models
-            ]
+            ) for model in self.models
+        ]
 
         output = '\n'.join(output_list)
 
@@ -62,10 +63,9 @@ class LanguageModel():
         for model in self.models:
             model.trainModel(text)
 
-
-###############################################################################
-# Begin Core >> FOR CORE IMPLEMENTION, DO NOT EDIT ABOVE OF THIS SECTION <<
-###############################################################################
+    ###############################################################################
+    # Begin Core >> FOR CORE IMPLEMENTION, DO NOT EDIT ABOVE OF THIS SECTION <<
+    ###############################################################################
 
     def selectNGramModel(self, sentence):
         """
@@ -79,7 +79,12 @@ class LanguageModel():
                   (Remember that you wrote a function that checks if a model can
                   be used to pick a word for a sentence!)
         """
-        pass
+        if self.models[0].trainingDataHasNGram(self, sentence):
+            return TrigramModel
+        elif self.models[1].trainingDataHasNGram(self, sentence):
+            return BigramModel
+        else:
+            return UnigramModel
 
     def weightedChoice(self, candidates):
         """
@@ -89,8 +94,16 @@ class LanguageModel():
         Effects:  returns a candidate item (a key in the candidates dictionary)
                   based on the algorithm described in the spec.
         """
-        pass
+        cumulative = {}
+        temp_total = 0
+        for x in candidates:
+            temp_total += candidates[x]
+            cumulative[x] = temp_total
 
+        randy = random.randrange(1, temp_total)
+        for y in cumulative:
+            if randy > cumulative[y]:
+                return candidates[y]
 
     def getNextToken(self, sentence, filter=None):
         """
@@ -106,7 +119,17 @@ class LanguageModel():
                   can produce a next token using the filter, then a random
                   token from the filter is returned instead.
         """
-        pass
+        type = self.selectNGramModel(sentence)
+        if filter is None:
+            return self.weightedChoice(type.getCandidateDictionary(sentence))
+        else:
+            filteredCandidates = {}
+            for i in type.getCandidateDictionary(sentence):
+                if i == filter:
+                    filteredCandidates.update({i: type.getCandidateDictionary(sentence)[i]})
+            if filteredCandidates == {}:
+                return random.choice(filter)
+
 
 ###############################################################################
 # End Core
@@ -117,4 +140,7 @@ class LanguageModel():
 ###############################################################################
 
 if __name__ == '__main__':
-    # test cases here
+    instance = LanguageModel
+    print(instance)
+    sentence = ["hello", "nice", "to", "meet", "you"]
+    type(instance.selectNGramModel(LanguageModel, sentence))
