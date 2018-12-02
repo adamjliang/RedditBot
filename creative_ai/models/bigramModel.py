@@ -41,7 +41,7 @@ class BigramModel():
                   which has strings as keys and dictionaries of
                   {string: integer} pairs as values.
         """
-        for sentences in text:
+        for sentence in text:
             for i in range(len(sentence) - 1):
                 if (sentence[i] not in self.nGramCounts):
                     self.nGramCounts[sentence[i]] = {}
@@ -70,7 +70,7 @@ class BigramModel():
                   to the current sentence. For details on which words the
                   BigramModel sees as candidates, see the spec.
         """
-        return self.nGramCounts[Sentence[-1]]
+        return self.nGramCounts[sentence[-1]]
 
 ###############################################################################
 # End Core

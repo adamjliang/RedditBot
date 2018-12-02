@@ -44,7 +44,7 @@ class TrigramModel():
                   and dictionaries of {string: integer} pairs as values.
         """
 
-        for sentences in text:
+        for sentence in text:
             for i in range(len(sentence) - 2):
                 if (sentence[i] not in self.nGramCounts):
                     self.nGramCounts[sentence[i]] = {}
@@ -53,7 +53,7 @@ class TrigramModel():
                 if (sentence[i+2] not in self.nGramCounts[sentence[i]][sentence[i+1]]):
                     self.nGramCounts[sentence[i]][sentence[i+1]][sentence[i+2]] = 1
                 elif (sentence[i+2] in self.nGramCounts[sentence[i]][sentence[i+1]]):
-                    self.nGramCounts[sentence[i]][sentence[i + 1]][sentence[i + 2]] += 1;
+                    self.nGramCounts[sentence[i]][sentence[i + 1]][sentence[i + 2]] += 1
 
     def trainingDataHasNGram(self, sentence):
         """
@@ -77,7 +77,7 @@ class TrigramModel():
                   to the current sentence. For details on which words the
                   TrigramModel sees as candidates, see the spec.
         """
-        return self.nGramCounts[Sentence[-2]][Sentence[-1]]
+        return self.nGramCounts[sentence[-2]][sentence[-1]]
 
 ###############################################################################
 # End Core
