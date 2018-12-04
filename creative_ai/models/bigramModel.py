@@ -1,5 +1,6 @@
 from creative_ai.utils.print_helpers import ppGramJson
 
+
 class BigramModel():
 
     def __init__(self):
@@ -8,7 +9,7 @@ class BigramModel():
         Modifies: self (this instance of the NGramModel object)
         Effects:  This is the NGramModel constructor. It sets up an empty
                   dictionary as a member variable.
-        
+
         This function is done for you.
         """
         self.nGramCounts = {}
@@ -20,16 +21,15 @@ class BigramModel():
         Effects:  Returns the string to print when you call print on an
                   NGramModel object. This string will be formatted in JSON
                   and display the currently trained dataset.
-        
+
         This function is done for you.
         """
 
         return ppGramJson(self.nGramCounts)
 
-
-###############################################################################
-# Begin Core >> FOR CORE IMPLEMENTION, DO NOT EDIT ABOVE OF THIS SECTION <<
-###############################################################################
+    ###############################################################################
+    # Begin Core >> FOR CORE IMPLEMENTION, DO NOT EDIT ABOVE OF THIS SECTION <<
+    ###############################################################################
 
     def trainModel(self, text):
         """
@@ -41,14 +41,14 @@ class BigramModel():
                   which has strings as keys and dictionaries of
                   {string: integer} pairs as values.
         """
-        for sentence in text:
-            for i in range(len(sentence) - 1):
-                if (sentence[i] not in self.nGramCounts):
-                    self.nGramCounts[sentence[i]] = {}
-                if (sentence[i+1] not in self.nGramCounts[sentence[i]]):
-                    self.nGramCounts[sentence[i]][sentence[i+1]] = 1
-                elif (sentence[i+1] in self.nGramCounts[sentence[i]]):
-                    self.nGramCounts[sentence[i]][sentence[i + 1]] += 1
+        for sentences in text:
+            for i in range(len(sentences) - 1):
+                if (sentences[i] not in self.nGramCounts):
+                    self.nGramCounts[sentences[i]] = {}
+                if (sentences[i + 1] not in self.nGramCounts[sentences[i]]):
+                    self.nGramCounts[sentences[i]][sentences[i + 1]] = 1
+                elif (sentences[i + 1] in self.nGramCounts[sentences[i]]):
+                    self.nGramCounts[sentences[i]][sentences[i + 1]] += 1
 
     def trainingDataHasNGram(self, sentence):
         """
@@ -59,7 +59,6 @@ class BigramModel():
                   is determined for the BigramModel, see the spec.
         """
         return sentence[-1] in self.nGramCounts
-
 
     def getCandidateDictionary(self, sentence):
         """
@@ -72,6 +71,7 @@ class BigramModel():
         """
         return self.nGramCounts[sentence[-1]]
 
+
 ###############################################################################
 # End Core
 ###############################################################################
@@ -83,8 +83,6 @@ class BigramModel():
 if __name__ == '__main__':
     uni = BigramModel()
 
-    text = [ ['the', 'brown', 'fox'], ['the', 'lazy', 'dog'] ]
+    text = [['the', 'brown', 'fox'], ['the', 'lazy', 'dog']]
     uni.trainModel(text)
-    # Should print: { 'brown': 2, 'dog': 1, 'fox': 1, 'lazy': 1, 'the': 2 }
     print(uni)
-

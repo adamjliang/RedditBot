@@ -14,7 +14,7 @@ class LanguageModel():
         Modifies: self (this instance of the LanguageModel object)
         Effects:  This is the LanguageModel constructor. It sets up an empty
                   dictionary as a member variable.
-        
+
         This function is done for you.
         """
 
@@ -32,7 +32,7 @@ class LanguageModel():
                   It will show the number of trained paths
                   for each model it contains. It may be
                   useful for testing.
-        
+
         This function is done for you.
         """
 
@@ -79,12 +79,13 @@ class LanguageModel():
                   (Remember that you wrote a function that checks if a model can
                   be used to pick a word for a sentence!)
         """
-        if self.models[0].trainingDataHasNGram(self, sentence):
-            return TrigramModel
-        elif self.models[1].trainingDataHasNGram(self, sentence):
-            return BigramModel
+
+        if self.models[0].trainingDataHasNGram(sentence):
+            return self.models[0]
+        elif self.models[1].trainingDataHasNGram(sentence):
+            return self.models[1]
         else:
-            return UnigramModel
+            return self.models[2]
 
     def weightedChoice(self, candidates):
         """
@@ -94,16 +95,29 @@ class LanguageModel():
         Effects:  returns a candidate item (a key in the candidates dictionary)
                   based on the algorithm described in the spec.
         """
+        listKeys = []
+        listValsInDict = []
+        listCumulative = []
         cumulative = {}
+        randomNumber = 0
         temp_total = 0
-        for x in candidates:
-            temp_total += candidates[x]
-            cumulative[x] = temp_total
+        i = 0
+        returnValue = ""
+        for keys in candidates:
+            # for indices in candidates[i]:
+            listKeys.append(keys)
+            listValsInDict.append(candidates[keys])
+        for elements in listValsInDict:
+            temp_total += elements
+            listCumulative.append(temp_total)
+        for keys in candidates:
+            candidates[keys] = listCumulative[i]
+            i += 1
+        randomNumber = random.randrange(0, temp_total)
 
-        randy = random.randrange(1, temp_total)
-        for y in cumulative:
-            if randy > cumulative[y]:
-                return candidates[y]
+        for keys in candidates:
+            if randomNumber < candidates[keys]:
+                return keys
 
     def getNextToken(self, sentence, filter=None):
         """
@@ -140,7 +154,11 @@ class LanguageModel():
 ###############################################################################
 
 if __name__ == '__main__':
+    # testing selectNGramModel
     instance = LanguageModel
-    print(instance)
-    sentence = ["hello", "nice", "to", "meet", "you"]
-    type(instance.selectNGramModel(LanguageModel, sentence))
+
+    # testing weightedChoice
+    candidates = {'north': 4, 'south': 1, 'east': 3, 'west': 2}
+    print(instance.weightedChoice(instance, candidates))
+
+    # testing getNextToken

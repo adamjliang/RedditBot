@@ -1,5 +1,6 @@
 from creative_ai.utils.print_helpers import ppGramJson
 
+
 class UnigramModel():
 
     def __init__(self):
@@ -21,15 +22,15 @@ class UnigramModel():
         Effects:  Returns the string to print when you call print on an
                   NGramModel object. This string will be formatted in JSON
                   and display the currently trained dataset.
-        
+
         This function is done for you.
         """
 
         return ppGramJson(self.nGramCounts)
 
-###############################################################################
-# Begin Core >> FOR CORE IMPLEMENTION, DO NOT EDIT ABOVE OF THIS SECTION <<
-###############################################################################
+    ###############################################################################
+    # Begin Core >> FOR CORE IMPLEMENTION, DO NOT EDIT ABOVE OF THIS SECTION <<
+    ###############################################################################
 
     def trainModel(self, text):
         """
@@ -41,7 +42,7 @@ class UnigramModel():
                   self.nGramCounts, see the spec.
         """
 
-        for sentences[2:] in text:
+        for sentence in text:
             for word in sentence:
                 if (word not in self.nGramCounts):
                     self.nGramCounts[word] = 1
@@ -69,6 +70,7 @@ class UnigramModel():
         """
         return self.nGramCounts
 
+
 ###############################################################################
 # End Core
 ###############################################################################
@@ -79,15 +81,14 @@ class UnigramModel():
 
 # This is the code python runs when unigramModel.py is run as main
 if __name__ == '__main__':
-
     # An example trainModel test case
     uni = UnigramModel()
-    text = [ [ 'brown' ] ]
+    text = [['brown']]
     uni.trainModel(text)
     # Should print: { 'brown' : 1 }
     print(uni)
 
-    text = [ ['the', 'brown', 'fox'], ['the', 'lazy', 'dog'] ]
+    text = [['the', 'brown', 'fox'], ['the', 'lazy', 'dog']]
     uni.trainModel(text)
     # Should print: { 'brown': 2, 'dog': 1, 'fox': 1, 'lazy': 1, 'the': 2 }
     print(uni)
@@ -95,6 +96,6 @@ if __name__ == '__main__':
     # An example trainingDataHasNGram test case
     uni = UnigramModel()
     sentence = "Eagles fly in the sky"
-    print(uni.trainingDataHasNGram(sentence)) # should be False
+    print(uni.trainingDataHasNGram(sentence))  # should be False
     uni.trainModel(text)
-    print(uni.trainingDataHasNGram(sentence)) # should be True
+    print(uni.trainingDataHasNGram(sentence))  # should be True
