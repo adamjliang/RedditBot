@@ -166,7 +166,7 @@ def generateTokenSentence(model, desiredLength):
     while not sentenceTooLong(desiredLength, len(sentence) - 2):
         sentence.append(model.getNextToken(sentence))
         if '$:::$' in sentence:
-            sentence.remove('$:::$')
+            return sentence[2:-1]
     return sentence[2:]
 
 
