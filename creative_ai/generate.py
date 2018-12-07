@@ -153,18 +153,23 @@ def runMusicGenerator(models, songName):
 
 def generateTokenSentence(model, desiredLength):
     """
-    Requires: models is a list of trained NGramModel objects sorted by
-              descending priority: tri-, then bi-, then unigrams.
+    Requires: model is a single trained languageModel object.
               desiredLength is the desired length of the sentence.
     Modifies: nothing
     Effects:  returns a list of strings where each string is a word in the
               generated sentence. The returned list should NOT include
               any of the special starting or ending symbols.
-
               For more details about generating a sentence using the
               NGramModels, see the spec.
     """
-    pass
+    sentence = ['^::^', '^:::^']
+    while not sentenceTooLong(desiredLength, len(sentence) - 2):
+        sentence.append(model.getNextToken(sentence))
+        if '$:::$' in sentence:
+            sentence.remove('$:::$')
+    return sentence[2:]
+
+
 
 ###############################################################################
 # End Core
