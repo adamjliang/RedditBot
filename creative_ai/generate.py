@@ -51,7 +51,7 @@ def printSongLyrics(verseOne, verseTwo, chorus):
     Requires: verseOne, verseTwo, and chorus are lists of lists of strings
     Modifies: nothing
     Effects:  prints the song.
-    
+
     This function is done for you.
     """
     verses = [verseOne, chorus, verseTwo, chorus]
@@ -72,7 +72,7 @@ def trainLyricModels(lyricDirs, test=False):
               them using the text loaded from the data loader. The list
               should be in tri-, then bi-, then unigramModel order.
               Returns the list of trained models.
-              
+
     This function is done for you.
     """
     model = LanguageModel()
@@ -92,7 +92,7 @@ def trainMusicModels(musicDirs):
               and takes a music directory name instead of an artist name.
               Returns a list of trained models in order of tri-, then bi-, then
               unigramModel objects.
-              
+
     This function is done for you.
     """
     model = LanguageModel()
@@ -169,7 +169,156 @@ def generateTokenSentence(model, desiredLength):
             return sentence[2:-1]
     return sentence[2:]
 
+def printHighScores():
+    # Read file contents
+    ifstream = open('leaderboardData.txt')
+    lines = ifstream.readlines()
+    ifstream.close()
 
+    for i in range(0, 10):
+        print((str(i+1)) + ') ' + lines[i])
+
+
+def printRankBasedOnTotalPlayers(userName):
+    # Read file contents
+    count = 0
+    aUserName = ""
+    ifstream = open('leaderboardData.txt')
+    lines = ifstream.readlines()
+    ifstream.close()
+    # print(len(lines)) prints the amount of lines in the the txt file
+    i = 0
+    rank = 0
+    # for letters in lines[0]: this does one letter per line
+    # for words in lines: this does one line of words per line
+    #  words in lines:
+    # print(words[0]) This prints the first letter of each line
+    while i < len(lines):
+        if count == 0:
+            aUserName = ''
+            while '|' not in aUserName:
+                for letters in lines[i]:
+                    if '|' not in aUserName:
+                        aUserName = aUserName + letters
+            aUserName = aUserName[:-1]
+            if aUserName == userName:
+                count += 1
+                # length of how many lines - current rank all divided by length of how many lines
+                rank = ((((len(lines) - (i + 1)) / len(lines))) * 100)
+                print('You are better than ' + str('{:.1f}'.format(rank)) + '% of people who have played this game')
+                print()
+        i += 1
+    if count == 0:
+        print('You have never played before using this unique username!')
+        print()
+
+def playGame():
+    print('Would you like to play with a short, medium, long, or very long game?')
+    print()
+    typeOfGame = input('Type of game: ')
+    typeOfGame = typeOfGame.lower()
+    if typeOfGame == 'short' or typeOfGame == 's':
+        numOfHeadlines = 10
+    elif typeOfGame == 'medium' or typeOfGame == 'm':
+        numOfHeadlines = 25
+    elif typeOfGame == 'long' or typeOfGame == 'l':
+        numOfHeadlines = 50
+    elif typeOfGame == 'very long' or typeOfGame == 'v':
+        numOfHeadlines = 100
+    else:
+        numOfHeadlines = 0
+    while not (numOfHeadlines == 10 or numOfHeadlines == 25 or numOfHeadlines == 50 or numOfHeadlines == 100):
+        print('Input must be short, s, medium, m, long, l, very long, or v')
+        print()
+        typeOfGame = input("Type of game: ")
+        typeOfGame = typeOfGame.lower()
+        if typeOfGame == 'short' or typeOfGame == 's':
+            numOfHeadlines = 10
+        if typeOfGame == 'medium' or typeOfGame == 'm':
+            numOfHeadlines = 25
+        if typeOfGame == 'long' or typeOfGame == 'l':
+            numOfHeadlines = 50
+        if typeOfGame == 'very long' or typeOfGame == 'v':
+            numOfHeadlines = 100
+    print()
+    print('What difficulty mode would you like to play on?')
+    print()
+    dMode = input('Type 1 for Beginner, 2 for Easy, 3 for Medium, 4 for Hard, 5 for Impossible: ')
+    while not (dMode == '1' or dMode == '2' or dMode == '3' or dMode == '4' or dMode == '5'):
+        print()
+        print('That is not a valid mode! Input must be 1, 2, 3, 4, or 5. Try again.')
+        print()
+        dMode = input('Type 1 for Beginner, 2 for Easy, 3 for Medium, 4 for Hard, 5 for Impossible: ')
+    if dMode == '1':
+        beginnerMode(numOfHeadlines)
+    elif dMode == '2':
+        easyMode(numOfHeadlines)
+    elif dMode == '3':
+        mediumMode(numOfHeadlines)
+    elif dMode == '4':
+        hardMode(numOfHeadlines)
+    else:
+        impossibleMode(numOfHeadlines)
+
+
+def beginnerMode(numHeadlines):
+    print()
+    numUserRight = 0
+    numHeadLinesWentThrough = 0
+    numAIRight = 0
+    percentChanceOfAIGettingItRight = 0
+    print('Beginner Mode in progress...')
+
+def easyMode(numHeadlines):
+    print()
+    numUserRight = 0
+    numHeadLinesWentThrough = 0
+    numAIRight = 0
+    percentChanceOfAIGettingItRight = 0
+    print('Easy Mode in progress...')
+
+def mediumMode(numHeadlines):
+    print()
+    numUserRight = 0
+    numHeadLinesWentThrough = 0
+    numAIRight = 0
+    percentChanceOfAIGettingItRight = 0
+    print('Medium Mode in progress...')
+
+def hardMode(numHeadlines):
+    print()
+    numUserRight = 0
+    numHeadLinesWentThrough = 0
+    numAIRight = 0
+    percentChanceOfAIGettingItRight = 0
+    print('Hard Mode in progress...')
+
+def impossibleMode(numHeadlines):
+    print()
+    numUserRight = 0
+    numHeadLinesWentThrough = 0
+    numAIRight = 0
+    percentChanceOfAIGettingItRight = 0
+    print('Impossible Mode in progress...')
+
+def __gen_colors(n):
+    possible_foreground = list(range(30, 38)) + list(range(90, 98))
+    possible_background = list(range(40, 48)) + list(range(100, 108))
+    fx = n % len(possible_foreground)
+    bx = (n * 2 - 17 * 3029) % len(possible_background)
+    f_hsh = possible_foreground[fx]
+    b_hsh = possible_background[bx]
+
+    fmt = '\033[{0};{1}m'
+    # \e[103m with \e[96m is elixir
+    if n == 68: return fmt.format(103, 96)
+    #\e[43m  with \e[37m is felix
+    if n == 118: return fmt.format(43, 37)
+    return fmt.format(f_hsh, b_hsh)
+
+def __reset_colors(n):
+    # default \e[49m \e[39m
+    return '\033[49;39m'
 
 ###############################################################################
 # End Core
@@ -179,11 +328,39 @@ def generateTokenSentence(model, desiredLength):
 # Main
 ###############################################################################
 
+PROMPT1 = __gen_colors(350) + 'Print Instructions'
+
+
 PROMPT = [
-    'Generate song lyrics by The Beatles',
-    'Generate a song using data from Nintendo Gamecube',
-    'Quit the music generator'
+    'Print Instructions',
+    'Print High Scores',
+    'Print Rank Based on UserName',
+    'Play the Game',
+    'Change Username',
+    'Quit the game'
 ]
+
+INSTRUCTIONS = 'Welcome to Commit the Fake. To play the game, please selection option 4.\n\
+You will have the option to play a short, medium, long, or very long game.\n\
+A short game will consist of 10 headlines, a medium game will consist of 25 headlines,\n\
+a long game will consist of 50 headlines, and a very long game will consist of 100 headlines.\n\
+The whole goal of the game is to pick the fake headline more often than the bot does.\n\
+There are five difficulty levels for the bot: Beginner, Easy, Medium, Hard, and Impossible.\n\
+Your total score is calculated using the formula below: \n\
+Beginner Mode wins will increase your total score by 0 points. \n\
+Easy Mode wins will increase your total score by 1 point. \n\
+Medium Mode wins will increase your total score by 3 points. \n\
+Hard Mode wins will increase your total score by 5 points. \n\
+Impossible Mode wins will increase your total score by 10000 points. \n\
+Note that you must BEAT the bot in order for it to count as a win. \n\
+BONUS: Depending on the length of the game, your score will get multiplied as follows: \n\
+Short games will multiply the amount of points you receive for that game by 1. \n\
+Medium games will multiply the amount of points you receive for that game by 3. \n\
+Long games will multiply the amount of points you receive for that game by 7. \n\
+Very long games will multiply the amount of points you receive for that game by 15. \n\
+'
+
+
 
 def main():
     """
@@ -197,36 +374,33 @@ def main():
 
     mainMenu = Menu(PROMPT)
 
-    lyricsTrained = False
-    musicTrained = False
-
-    print('Welcome to the {} music generator!'.format(TEAM))
+    print()
+    print('Welcome to: "Commit to the Fake"! Please input your username and select an option to continue.'.format(TEAM))
+    print()
+    userName = input('User name: ')
+    print()
+    print('Hello, ' + userName + '!')
+    print()
     while True:
         userInput = mainMenu.getChoice()
-
+        print ()
         if userInput == 1:
-            if not lyricsTrained:
-                print('Starting lyrics generator...')
-                lyricsModel = trainLyricModels(LYRICSDIRS)
-                lyricsTrained = True
-
-            runLyricsGenerator(lyricsModel)
-
+            print(INSTRUCTIONS)
         elif userInput == 2:
-            if not musicTrained:
-                print('Starting music generator...')
-                musicModel = trainMusicModels(MUSICDIRS)
-                musicTrained = True
-
-            songName = input('What would you like to name your song? ')
-            
-            runMusicGenerator(musicModel, WAVDIR + songName + '.wav')
-
+            printHighScores()
         elif userInput == 3:
-            print('Thank you for using the {} music generator!'.format(TEAM))
+            printRankBasedOnTotalPlayers(userName)
+        elif userInput == 4:
+            playGame()
+        elif userInput == 5:
+            print('Enter in your new user name.')
+            userName = input('User name: ')
+            print('Hello, ' + userName + '!')
+            print()
+        elif userInput == 6:
+            print('Thank you for playing "Commit to the Fake"!'.format(TEAM))
             sys.exit()
 
-# This is how python tells if the file is being run as main
 if __name__ == '__main__':
     main()
     # note that if you want to individually test functions from this file,
