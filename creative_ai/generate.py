@@ -169,6 +169,10 @@ def generateTokenSentence(model, desiredLength):
             return sentence[2:-1]
     return sentence[2:]
 
+###############################################################################
+# Begin REACH
+###############################################################################
+
 def printHighScores():
     # Read file contents
     ifstream = open('leaderboardData.txt')
@@ -204,7 +208,7 @@ def printRankBasedOnTotalPlayers(userName):
             if aUserName == userName:
                 count += 1
                 # length of how many lines - current rank all divided by length of how many lines
-                rank = ((((len(lines) - (i + 1)) / len(lines))) * 100)
+                rank = ((((len(lines) - 1 - i) / (len(lines) - 1))) * 100)
                 print('You are better than ' + str('{:.1f}'.format(rank)) + '% of people who have played this game')
                 print()
         i += 1
@@ -301,6 +305,111 @@ def impossibleMode(numHeadlines):
     percentChanceOfAIGettingItRight = 0
     print('Impossible Mode in progress...')
 
+def userNamePrompt():
+    print()
+    userName = input('User name: ')
+    print()
+
+    # Read file contents
+    count = 0
+    aUserName = ''
+    ifstream = open('usernamesAndPasswords.txt')
+    linesBeginning = ifstream.readlines()
+    ifstream.close()
+    # print(len(lines)) prints the amount of lines in the the txt file
+    i = 0
+    while i < len(linesBeginning):
+        if count == 0:
+            aUserName = ''
+            while ':' not in aUserName:
+                for letters in linesBeginning[i]:
+                    if ':' not in aUserName:
+                        aUserName = aUserName + letters
+            aUserName = aUserName[:-1]
+            if aUserName == userName:
+                count += 1
+                print('Enter your password so we know it is really you!')
+                password = input('Password (type "escape" to go back): ')
+                if password.lower() == 'escape':
+                    userNamePrompt()
+                else:
+                    authenticatePassword(userName, password)
+                    print()
+                    print('Welcome back, ' + userName + '!')
+        i += 1
+    if count == 0:
+        print('Wow, a new user! Welcome, ' + userName + '!')
+        print()
+        print('Enter a password for this user name for later use')
+        password = input('Password (type "escape" to go back): ')
+        if password.lower() == 'escape':
+            userNamePrompt()
+        else:
+            f = open('usernamesAndPasswords.txt', 'a')  # Open file
+            f.write('\n' + userName + ':' + password + '|')  # Write string
+            f.close()  # Close the file
+
+    print()
+    return userName
+
+
+
+
+def authenticatePassword(userName, password):
+    # Read file contents
+    personalCount = 0
+    count = 0
+    i = 0
+    wrongTimesEntered = 0
+    timesLeftBeforeExit = 10
+    aUserName = ''
+    aPassword = '1$%d8cds823jr'
+    count = 0
+    ifstream = open('usernamesAndPasswords.txt')
+    linesPasswords = ifstream.readlines()
+    ifstream.close()
+    while i < len(linesPasswords):
+        personalCount = 0
+        if count == 0:
+            aUserName = ''
+            while ':' not in aUserName:
+                for letters in linesPasswords[i]:
+                    if ':' not in aUserName:
+                        aUserName = aUserName + letters
+            aUserName = aUserName[:-1]
+            if aUserName == userName:
+                aPassword = ''
+                for letters in linesPasswords[i]:
+                    if ':' not in aPassword and personalCount == 0:
+                        aPassword = aPassword + letters
+                    if ':' in aPassword and personalCount == 0:
+                        personalCount = 1
+                    if ':' in aPassword and personalCount == 1:
+                        aPassword = ''
+                        personalCount = 2
+                    if personalCount == 2 and '|' not in aPassword:
+                        aPassword = aPassword + letters
+                aPassword = aPassword[1:-1]
+                if aPassword == password:
+                    count += 1
+                else:
+                    while not (password == aPassword):
+                        timesLeftBeforeExit -= 1
+                        if (timesLeftBeforeExit == 0):
+                            print('You have entered your password incorrectly too many times, goodbye!')
+                            sys.exit()
+                        print('Your password is incorrect. Please retry! You have ' + str(timesLeftBeforeExit) + ' times left (case sensitive!!)')
+                        password = input('Password: ')
+
+        i += 1
+
+def welcomeMessage():
+    print()
+    print('Welcome to: "Commit to the Fake"! Please input your username and select an option to continue.'.format(TEAM))
+
+def endMessage():
+    print('Thank you for playing "Commit to the Fake"!'.format(TEAM))
+
 def __gen_colors(n):
     possible_foreground = list(range(30, 38)) + list(range(90, 98))
     possible_background = list(range(40, 48)) + list(range(100, 108))
@@ -310,15 +419,93 @@ def __gen_colors(n):
     b_hsh = possible_background[bx]
 
     fmt = '\033[{0};{1}m'
-    # \e[103m with \e[96m is elixir
     if n == 68: return fmt.format(103, 96)
-    #\e[43m  with \e[37m is felix
     if n == 118: return fmt.format(43, 37)
     return fmt.format(f_hsh, b_hsh)
 
 def __reset_colors(n):
     # default \e[49m \e[39m
     return '\033[49;39m'
+
+def sortLeaderboard():
+    '''
+     Requires: leaderboardData.txt is in the proper format
+     Modifies: leaderboardData.txt
+     Effects: returns a new list of a sorted leaderboard and then overwrites the current file
+     Sorts so that highest score is on top and the lowest total score
+     is on the bottom and the data is maintained while sorting
+     '''
+    i = 0
+    temp = ''
+    ifstream = open('leaderboardData.txt')
+    linesToSeeTotalScore = ifstream.readlines()
+    ifstream.close()
+    while i < len(linesToSeeTotalScore) - 1:
+        stringTotalScore = ''
+        stringTotalScorePlusOne = ''
+        stringLine = ''
+        stringLinePlusOne = ''
+        for letters in linesToSeeTotalScore[i][-8:]:
+            if letters == '0' or letters == '1' or letters == '2' or letters == '3' or letters == '4'\
+                    or letters == '5' or letters == '6' or letters == '7' or letters == '8' or letters == '9':
+                stringTotalScore += letters
+        for letters in linesToSeeTotalScore[i+1][-8:]:
+            if letters == '0' or letters == '1' or letters == '2' or letters == '3' or letters == '4'\
+                    or letters == '5' or letters == '6' or letters == '7' or letters == '8' or letters == '9':
+                stringTotalScorePlusOne += letters
+        if int(stringTotalScorePlusOne) > int(stringTotalScore):
+            for letters in linesToSeeTotalScore[i]:
+                stringLine += letters
+            for letters in linesToSeeTotalScore[i + 1]:
+                stringLinePlusOne += letters
+            #reversing the lines
+            temp = stringLine
+            stringLine = stringLinePlusOne
+            stringLinePlusOne = temp
+            linesToSeeTotalScore[i] = stringLine
+            linesToSeeTotalScore[i+1] = stringLinePlusOne
+        i += 1
+    i = 0
+    print(len(linesToSeeTotalScore))
+    f = open('leaderboardData.txt', 'w')  # Open file
+    while i < len(linesToSeeTotalScore):
+        f.write(linesToSeeTotalScore[i])  # Write string
+        i += 1
+    f.close()  # Close the file
+
+
+
+def isLeaderboardSorted():
+    '''
+    Requires: leaderboardData.txt is in the proper format
+    Modifies: Nothing
+    Effects: returns true if the leaderboard is sorted and returns false if the leaderboard is not sorted
+    '''
+    i = 0
+    check = 0
+    stringTotalScore = ''
+    stringTotalScorePlusOne = ''
+    ifstream = open('leaderboardData.txt')
+    linesToSeeTotalScore = ifstream.readlines()
+    ifstream.close()
+    while i < len(linesToSeeTotalScore) - 1:
+        stringTotalScore = ''
+        stringTotalScorePlusOne = ''
+        for letters in linesToSeeTotalScore[i][-8:]:
+            if letters == '0' or letters == '1' or letters == '2' or letters == '3' or letters == '4'\
+                    or letters == '5' or letters == '6' or letters == '7' or letters == '8' or letters == '9':
+                stringTotalScore += letters
+        for letters in linesToSeeTotalScore[i+1][-8:]:
+            if letters == '0' or letters == '1' or letters == '2' or letters == '3' or letters == '4'\
+                    or letters == '5' or letters == '6' or letters == '7' or letters == '8' or letters == '9':
+                stringTotalScorePlusOne += letters
+        if int(stringTotalScorePlusOne) > int(stringTotalScore):
+            check += 1
+        i += 1
+    if check == 0:
+        return True
+    else:
+        return False
 
 ###############################################################################
 # End Core
@@ -336,7 +523,7 @@ PROMPT = [
     'Print High Scores',
     'Print Rank Based on UserName',
     'Play the Game',
-    'Change Username',
+    'Change User',
     'Quit the game'
 ]
 
@@ -373,17 +560,10 @@ def main():
     """
 
     mainMenu = Menu(PROMPT)
-
-    print()
-    print('Welcome to: "Commit to the Fake"! Please input your username and select an option to continue.'.format(TEAM))
-    print()
-    userName = input('User name: ')
-    print()
-    print('Hello, ' + userName + '!')
-    print()
+    welcomeMessage()
+    userName = userNamePrompt()
     while True:
         userInput = mainMenu.getChoice()
-        print ()
         if userInput == 1:
             print(INSTRUCTIONS)
         elif userInput == 2:
@@ -393,12 +573,9 @@ def main():
         elif userInput == 4:
             playGame()
         elif userInput == 5:
-            print('Enter in your new user name.')
-            userName = input('User name: ')
-            print('Hello, ' + userName + '!')
-            print()
+            userName = userNamePrompt()
         elif userInput == 6:
-            print('Thank you for playing "Commit to the Fake"!'.format(TEAM))
+            endMessage()
             sys.exit()
 
 if __name__ == '__main__':
