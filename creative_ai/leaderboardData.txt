@@ -1,0 +1,12 @@
+CPU1| Beginner Wins: 0 Easy Wins: 1 Medium Wins: 0 Hard Wins: 0 Impossible Wins: 0 Total Wins: 0 Total Score: 1
+CPU2| Beginner Wins: 0 Easy Wins: 1 Medium Wins: 0 Hard Wins: 0 Impossible Wins: 0 Total Wins: 0 Total Score: 1
+CPU3| Beginner Wins: 0 Easy Wins: 1 Medium Wins: 0 Hard Wins: 0 Impossible Wins: 0 Total Wins: 0 Total Score: 1
+CPU4| Beginner Wins: 0 Easy Wins: 1 Medium Wins: 0 Hard Wins: 0 Impossible Wins: 0 Total Wins: 0 Total Score: 1
+CPU5| Beginner Wins: 0 Easy Wins: 1 Medium Wins: 0 Hard Wins: 0 Impossible Wins: 0 Total Wins: 0 Total Score: 1
+CPU6| Beginner Wins: 0 Easy Wins: 1 Medium Wins: 0 Hard Wins: 0 Impossible Wins: 0 Total Wins: 0 Total Score: 1
+CPU7| Beginner Wins: 0 Easy Wins: 1 Medium Wins: 0 Hard Wins: 0 Impossible Wins: 0 Total Wins: 0 Total Score: 1
+CPU8| Beginner Wins: 0 Easy Wins: 1 Medium Wins: 0 Hard Wins: 0 Impossible Wins: 0 Total Wins: 0 Total Score: 1
+CPU9| Beginner Wins: 0 Easy Wins: 1 Medium Wins: 0 Hard Wins: 0 Impossible Wins: 0 Total Wins: 0 Total Score: 1
+CPU10| Beginner Wins: 0 Easy Wins: 1 Medium Wins: 0 Hard Wins: 0 Impossible Wins: 0 Total Wins: 0 Total Score: 1
+CPU11| Beginner Wins: 0 Easy Wins: 1 Medium Wins: 0 Hard Wins: 0 Impossible Wins: 0 Total Wins: 0 Total Score: 1
+sup| Beginner Wins: 0 Easy Wins: 1 Medium Wins: 0 Hard Wins: 0 Impossible Wins: 0 Total Wins: 0 Total Score: 1|

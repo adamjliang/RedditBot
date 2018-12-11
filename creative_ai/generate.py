@@ -3,19 +3,27 @@ import sys
 sys.dont_write_bytecode = True # Suppress .pyc files
 
 import random
+import praw
+import pdb
+import re
+import os
 
-from creative_ai.pysynth import pysynth
+# Create the Reddit instance
+reddit = praw.Reddit('bot1')
+
+
+import spacy
+nlp = spacy.load("en_core_web_sm")
+
 from creative_ai.utils.menu import Menu
 from creative_ai.data.dataLoader import *
 from creative_ai.models.musicInfo import *
 from creative_ai.models.languageModel import LanguageModel
 
 # FIXME Add your team name
-TEAM = 'YOUR NAME HERE'
-LYRICSDIRS = ['the_beatles']
-TESTLYRICSDIRS = ['the_beatles_test']
-MUSICDIRS = ['gamecube']
-WAVDIR = 'wav/'
+TEAM = 'Lets Git This Bread'
+LYRICSDIRS = ['stupidfile']
+TESTLYRICSDIRS = ['headlines']
 
 def output_models(val, output_fn = None):
     """
@@ -46,7 +54,7 @@ def sentenceTooLong(desiredLength, currentLength):
     val = random.gauss(currentLength, STDEV)
     return val > desiredLength
 
-def printSongLyrics(verseOne, verseTwo, chorus):
+def printHeadline(verseOne):
     """
     Requires: verseOne, verseTwo, and chorus are lists of lists of strings
     Modifies: nothing
@@ -54,17 +62,14 @@ def printSongLyrics(verseOne, verseTwo, chorus):
 
     This function is done for you.
     """
-    verses = [verseOne, chorus, verseTwo, chorus]
+    myString = ""
+    for line in verseOne:
+        myString += ((' '.join(line)).capitalize())
+    return myString
 
-    print()
-    for verse in verses:
-        for line in verse:
-            print((' '.join(line)).capitalize())
-        print()
-
-def trainLyricModels(lyricDirs, test=False):
+def trainHeadlineModels(headlineDirs, test=False):
     """
-    Requires: lyricDirs is a list of directories in data/lyrics/
+    Requires: lyricDirs is a list of directories in data/headlines/
     Modifies: nothing
     Effects:  loads data from the folders in the lyricDirs list,
               using the pre-written DataLoader class, then creates an
@@ -77,33 +82,14 @@ def trainLyricModels(lyricDirs, test=False):
     """
     model = LanguageModel()
 
-    for ldir in lyricDirs:
-        lyrics = prepData(loadLyrics(ldir))
-        model.updateTrainedData(lyrics)
+    for hdir in headlineDirs:
+        headline = prepData(loadLyrics(hdir))
+        model.updateTrainedData(headline)
 
     return model
 
-def trainMusicModels(musicDirs):
-    """
-    Requires: musicDirs is a list of directories in data/midi/
-    Modifies: nothing
-    Effects:  works exactly as trainLyricsModels, except that
-              now the dataLoader calls the DataLoader's loadMusic() function
-              and takes a music directory name instead of an artist name.
-              Returns a list of trained models in order of tri-, then bi-, then
-              unigramModel objects.
 
-    This function is done for you.
-    """
-    model = LanguageModel()
-
-    for mdir in musicDirs:
-        music = prepData(loadMusic(mdir))
-        model.updateTrainedData(music)
-
-    return model
-
-def runLyricsGenerator(models):
+def runHeadlineGenerator(models):
     """
     Requires: models is a list of a trained nGramModel child class objects
     Modifies: nothing
@@ -111,41 +97,25 @@ def runLyricsGenerator(models):
               calls printSongLyrics to print the song out.
     """
     verseOne = []
-    verseTwo = []
-    chorus = []
+    myBool = True
 
-    for _ in range(4):
-        verseOne.append(generateTokenSentence(models, 7))
-        verseTwo.append(generateTokenSentence(models, 7))
-        chorus.append(generateTokenSentence(models, 9))
+    while (myBool):
+        verseOne = []
+        for _ in range(1):
+            verseOne.append(generateTokenSentence(models, 12))
+        myString = ''
+        for line in verseOne:
+            myString += ((' '.join(line)).capitalize())
+        doc = nlp(myString)
+        i = len(doc)
+        if checkToSeeIfHeadlineIsUsed(myString):
+            if doc[i - 1].pos_ != 'DET' and doc[i - 1].pos_ != 'ADJ' and doc[i - 1].pos_ != 'ADP':
+                myString2 = printHeadline(verseOne)
+                myBool = False
+            else:
+                myBool = True
+    return myString2
 
-    printSongLyrics(verseOne, verseTwo, chorus)
-
-def runMusicGenerator(models, songName):
-    """
-    Requires: models is a list of trained models
-    Modifies: nothing
-    Effects:  uses models to generate a song and write it to the file
-              named songName.wav
-    """
-
-    verseOne = []
-    verseTwo = []
-    chorus = []
-
-    for i in range(4):
-        verseOne.extend(generateTokenSentence(models, 7))
-        verseTwo.extend(generateTokenSentence(models, 7))
-        chorus.extend(generateTokenSentence(models, 9))
-
-    song = []
-    song.extend(verseOne)
-    song.extend(verseTwo)
-    song.extend(chorus)
-    song.extend(verseOne)
-    song.extend(chorus)
-
-    pysynth.make_wav(song, fn=songName)
 
 ###############################################################################
 # Begin Core >> FOR CORE IMPLEMENTION, DO NOT EDIT OUTSIDE OF THIS SECTION <<
@@ -168,6 +138,30 @@ def generateTokenSentence(model, desiredLength):
         if '$:::$' in sentence:
             return sentence[2:-1]
     return sentence[2:]
+
+###############################################################################
+# End CORE
+###############################################################################
+
+###############################################################################
+# Begin REACH
+###############################################################################
+
+
+def checkToSeeIfHeadlineIsUsed(string):
+    ifstream = open('allHeadlines.txt')
+    lines = ifstream.readlines()
+    ifstream.close()
+    i = 0
+    count = 0
+    while i < len(lines):
+        if lines[i][:-1] == string:
+            count += 1
+        i += 1
+    if count == 0:
+        return True
+    else:
+        return False
 
 def printHighScores():
     # Read file contents
@@ -204,7 +198,7 @@ def printRankBasedOnTotalPlayers(userName):
             if aUserName == userName:
                 count += 1
                 # length of how many lines - current rank all divided by length of how many lines
-                rank = ((((len(lines) - (i + 1)) / len(lines))) * 100)
+                rank = ((((len(lines) - 1 - i) / (len(lines) - 1))) * 100)
                 print('You are better than ' + str('{:.1f}'.format(rank)) + '% of people who have played this game')
                 print()
         i += 1
@@ -212,7 +206,13 @@ def printRankBasedOnTotalPlayers(userName):
         print('You have never played before using this unique username!')
         print()
 
-def playGame():
+def playGame(userName):
+
+    # posting generated text in reddit
+    subreddit = reddit.subreddit('eecs183')
+
+    subreddit.submit('Commit to the Fake', 'Welcome to "Commit to the Fake"')
+
     print('Would you like to play with a short, medium, long, or very long game?')
     print()
     typeOfGame = input('Type of game: ')
@@ -250,34 +250,339 @@ def playGame():
         print()
         dMode = input('Type 1 for Beginner, 2 for Easy, 3 for Medium, 4 for Hard, 5 for Impossible: ')
     if dMode == '1':
-        beginnerMode(numOfHeadlines)
+        beginnerMode(userName, numOfHeadlines)
     elif dMode == '2':
-        easyMode(numOfHeadlines)
+        easyMode(userName, numOfHeadlines)
     elif dMode == '3':
-        mediumMode(numOfHeadlines)
+        mediumMode(userName, numOfHeadlines)
     elif dMode == '4':
-        hardMode(numOfHeadlines)
+        hardMode(userName, numOfHeadlines)
     else:
-        impossibleMode(numOfHeadlines)
+        impossibleMode(userName, numOfHeadlines)
 
 
-def beginnerMode(numHeadlines):
+def beginnerMode(userName, numHeadlines):
     print()
     numUserRight = 0
-    numHeadLinesWentThrough = 0
+    # n represent the number of headlines that we went through
+    n = 0
     numAIRight = 0
-    percentChanceOfAIGettingItRight = 0
-    print('Beginner Mode in progress...')
+    percentChanceOfAIGettingItRight = 1.0 / 10.0
+    while n < numHeadlines:
+        myString = ''
+        # Possibly include myRandomInt
+        realLeft = 2
+        fakeLeft = 1
+        gameList = ['', '', '']
+        gameListCount = 0
+        count = 0
+        i = 0
+        ifstream = open('allHeadlines.txt')
+        lines = ifstream.readlines()
+        ifstream.close()
+        # populate gameList with one fake and two real headlines, random order
+        while gameListCount < 3:
+            myString = lines[random.randint(0, len(lines) - 1)]
+            if realLeft > 0 and fakeLeft > 0:
+                randomInt = random.randint(1, 2)
+                if randomInt == 1:
+                    gameList[gameListCount] = myString
+                    realLeft -= 1
+                elif randomInt == 2:
+                    gameList[gameListCount] = 'FAKE'
+                    # generate fake here and assign it to gameList[gameListCount]
+                    fakeLeft -= 1
+            elif realLeft > 0 and fakeLeft == 0:
+                gameList[gameListCount] = myString
+                realLeft -= 1
+            elif fakeLeft > 0 and realLeft == 0:
+                gameList[gameListCount] = 'FAKE'
+                # generate fake here and assign it to gameList[gameListCount]
+                fakeLeft -= 1
+            gameListCount += 1
+        # here the reddit bot will output the titles but ill just do it here for testing
+        print(gameList)
+        print('Choose which one is the fake!! (1/2/3)')
+        choice = input('Choice: ')
+        while not (choice == '1' or choice == '2' or choice == '3'):
+            print('Invalid choice! Choice must be 1, 2, or 3')
+            choice = input('Choice: ')
 
-def easyMode(numHeadlines):
+        while i < len(lines):
+            if gameList[int(choice) - 1] == lines[i]:
+                print()
+                print('Incorrect!!')
+                count += 1
+            i += 1
+
+        if count == 0:
+            print()
+            print('Correct!!')
+            numUserRight += 1
+
+        randomIntForAI = random.randint(1, 10)
+        if randomIntForAI == 1:
+            numAIRight += 1
+            print('The bot got it right!')
+            print()
+        else:
+            print('The bot got it wrong!')
+            print()
+
+        n += 1
+    print('Amount you got right: ' + str(numUserRight))
+    print('Amount bot got right: ' + str(numAIRight))
+    if numUserRight > numAIRight:
+        multiplier = 1
+        if numHeadlines == 10:
+            multiplier = 1
+        if numHeadlines == 25:
+            multiplier = 3
+        if numHeadlines == 50:
+            multiplier = 7
+        if numHeadlines == 100:
+            multiplier = 15
+        totalPointsAdded = 0 * multiplier
+        print('Congratulations, you beat the bot! We have added ' + str(
+            totalPointsAdded) + ' points to your total score!')
+        # Read file contents
+        count = 0
+        aUserName = ''
+        ifstream = open('leaderboardData.txt')
+        lines = ifstream.readlines()
+        ifstream.close()
+        # print(len(lines)) prints the amount of lines in the the txt file
+        i = 0
+        while i < len(lines):
+            # not needed but might wack up the indent
+            if count == 0:
+                aUserName = ''
+                while '|' not in aUserName:
+                    for letters in lines[i]:
+                        if '|' not in aUserName:
+                            aUserName = aUserName + letters
+                aUserName = aUserName[:-1]
+                if aUserName == userName:
+                    count += 1
+            i += 1
+        if count == 0:
+            f = open('leaderboardData.txt', 'a')  # Open file
+            f.write(
+                userName + '| Beginner Wins: 1 Easy Wins: 0 Medium Wins: 0 Hard Wins: 0 Impossible Wins: 0 Total Wins: 0 Total Score: ' + str(
+                    totalPointsAdded) + '|' + '\n')  # Write string
+            f.close()  # Close the file
+            while not isLeaderboardSorted():
+                sortLeaderboard()
+        else:
+            # Read file contents
+            count = 0
+            aUserName = ''
+            ifstream = open('leaderboardData.txt')
+            lines = ifstream.readlines()
+            ifstream.close()
+            # print(len(lines)) prints the amount of lines in the the txt file
+            i = 0
+            f = open('leaderboardData.txt', 'w')  # Open file
+            while i < len(lines):
+                # not needed but might wack up the indent
+                if count == 0:
+                    aUserName = ''
+                    while '|' not in aUserName:
+                        for letters in lines[i]:
+                            if '|' not in aUserName:
+                                aUserName = aUserName + letters
+                    aUserName = aUserName[:-1]
+                    if aUserName == userName:
+                        origTotalScore = ''
+                        amountOfBeginnerWinsForThisUser = int(lines[i][len(userName) - 1 + 18])
+                        amountOfBeginnerWinsForThisUser += 1
+                        for letters in lines[i][-8:]:
+                            if letters == '0' or letters == '1' or letters == '2' or letters == '3' or letters == '4' \
+                                    or letters == '5' or letters == '6' or letters == '7' or letters == '8' or letters == '9':
+                                origTotalScore += letters
+                        intOrigTotalScore = int(origTotalScore)
+                        intTotalPointsAdded = int(totalPointsAdded)
+                        intTotalPointsAdded += intOrigTotalScore
+                        f.write(userName + '| Beginner Wins: ' + str(amountOfBeginnerWinsForThisUser) + ' Easy Wins: 0 Medium Wins: 0 Hard Wins: 0 Impossible Wins: 0 Total Wins: 0 Total Score: ' + str(
+                            intTotalPointsAdded) + '|' + '\n')  # Write string
+                    else:
+                        f.write(lines[i])
+                i += 1
+            f.close()
+            while not isLeaderboardSorted():
+                sortLeaderboard()
+    elif numUserRight == numAIRight:
+        print('Sorry, you have tied the bot. No points have been added to your total score.')
+    else:
+        print('Sorry, you lost to the bot. No points have been added to your total score')
+
+def easyMode(userName, numHeadlines):
     print()
     numUserRight = 0
-    numHeadLinesWentThrough = 0
+    #n represent the number of headlines that we went through
+    n = 0
     numAIRight = 0
-    percentChanceOfAIGettingItRight = 0
-    print('Easy Mode in progress...')
+    percentChanceOfAIGettingItRight = 1.0/3.0
+    while n < numHeadlines:
+        myString = ''
+        #Possibly include myRandomInt
+        realLeft = 2
+        fakeLeft = 1
+        gameList = ['', '', '']
+        gameListCount = 0
+        count = 0
+        i = 0
+        ifstream = open('allHeadlines.txt')
+        lines = ifstream.readlines()
+        ifstream.close()
+        #populate gameList with one fake and two real headlines, random order
+        while gameListCount < 3:
+            myString = lines[random.randint(0, len(lines) - 1)]
+            if realLeft > 0 and fakeLeft > 0:
+                randomInt = random.randint(1, 2)
+                if randomInt == 1:
+                    gameList[gameListCount] = myString[:-1]
+                    realLeft -= 1
+                elif randomInt == 2:
+                    headlineTrained = False
+                    if not headlineTrained:
+                        headlineModel = trainHeadlineModels(TESTLYRICSDIRS)
+                        headlineTrained = True
+                    gameList[gameListCount] = runHeadlineGenerator(headlineModel)
+                    fakeLeft -= 1
+            elif realLeft > 0 and fakeLeft == 0:
+                gameList[gameListCount] = myString[:-1]
+                realLeft -= 1
+            elif fakeLeft > 0 and realLeft == 0:
+                headlineTrained = False
+                if not headlineTrained:
+                    headlineModel = trainHeadlineModels(TESTLYRICSDIRS)
+                    headlineTrained = True
+                gameList[gameListCount] = runHeadlineGenerator(headlineModel)
+                fakeLeft -= 1
+            gameListCount += 1
+        #here the reddit bot will output the titles but ill just do it here for testing
+        # Get the top 5 values from our subreddit
+        subreddit = reddit.subreddit('eecs183')
+        for submission in subreddit.hot(limit=10):
 
-def mediumMode(numHeadlines):
+            if re.search("Commit to the Fake", submission.title, re.IGNORECASE):
+                # Reply to the post
+                verses = ['1', '2', '3', '4']
+                submission.reply('1) "' + gameList[0] + '",' + '\n' + ' 2) "' + gameList[1] + '",' + '\n' + ' 3) "' + gameList[2] + '"')
+        #print(gameList)
+        print('Choose which one is the fake!! (1/2/3)')
+        choice = input('Choice: ')
+        while not (choice == '1' or choice == '2' or choice == '3'):
+            print('Invalid choice! Choice must be 1, 2, or 3')
+            choice = input('Choice: ')
+
+
+        while i < len(lines):
+            if gameList[int(choice) - 1] == lines[i]:
+                print()
+                print('Incorrect!!')
+                count += 1
+            i += 1
+
+        if count == 0:
+            print()
+            print('Correct!!')
+            numUserRight += 1
+
+        randomIntForAI = random.randint(1, 3)
+        if randomIntForAI == 1:
+            numAIRight += 1
+            print('The bot got it right!')
+            print()
+        else:
+            print('The bot got it wrong!')
+            print()
+
+        n += 1
+    print('Amount you got right: ' + str(numUserRight))
+    print('Amount bot got right: ' + str(numAIRight))
+    if numUserRight > numAIRight:
+        multiplier = 1
+        if numHeadlines == 10:
+            multiplier = 1
+        if numHeadlines == 25:
+            multiplier = 3
+        if numHeadlines == 50:
+            multiplier = 7
+        if numHeadlines == 100:
+            multiplier = 15
+        totalPointsAdded = 1 * multiplier
+        print('Congratulations, you beat the bot! We have added ' + str(totalPointsAdded) +' points to your total score!')
+        # Read file contents
+        count = 0
+        aUserName = ''
+        ifstream = open('leaderboardData.txt')
+        lines = ifstream.readlines()
+        ifstream.close()
+        # print(len(lines)) prints the amount of lines in the the txt file
+        i = 0
+        while i < len(lines):
+            # not needed but might wack up the indent
+            if count == 0:
+                aUserName = ''
+                while '|' not in aUserName:
+                    for letters in lines[i]:
+                        if '|' not in aUserName:
+                            aUserName = aUserName + letters
+                aUserName = aUserName[:-1]
+                if aUserName == userName:
+                    count += 1
+            i+=1
+        if count == 0:
+            f = open('leaderboardData.txt', 'a')  # Open file
+            f.write(userName +  '| Beginner Wins: 0 Easy Wins: 1 Medium Wins: 0 Hard Wins: 0 Impossible Wins: 0 Total Wins: 0 Total Score: ' + str(totalPointsAdded) + '|' + '\n')  # Write string
+            f.close()  # Close the file
+            while not isLeaderboardSorted():
+                sortLeaderboard()
+        else:
+            # Read file contents
+            count = 0
+            aUserName = ''
+            ifstream = open('leaderboardData.txt')
+            lines = ifstream.readlines()
+            ifstream.close()
+            # print(len(lines)) prints the amount of lines in the the txt file
+            i = 0
+            f = open('leaderboardData.txt', 'w')  # Open file
+            while i < len(lines):
+                # not needed but might wack up the indent
+                if count == 0:
+                    aUserName = ''
+                    while '|' not in aUserName:
+                        for letters in lines[i]:
+                            if '|' not in aUserName:
+                                aUserName = aUserName + letters
+                    aUserName = aUserName[:-1]
+                    if aUserName == userName:
+                        origTotalScore = ''
+                        amountOfEasyWinsForThisUser = int(lines[i][len(userName) - 1 + 31])
+                        amountOfEasyWinsForThisUser += 1
+                        for letters in lines[i][-8:]:
+                            if letters == '0' or letters == '1' or letters == '2' or letters == '3' or letters == '4'\
+                            or letters == '5' or letters == '6' or letters == '7' or letters == '8' or letters == '9':
+                                    origTotalScore += letters
+                        intOrigTotalScore = int(origTotalScore)
+                        intTotalPointsAdded = int(totalPointsAdded)
+                        intTotalPointsAdded += intOrigTotalScore
+                        f.write(userName + '| Beginner Wins: 0 Easy Wins: ' + str(amountOfEasyWinsForThisUser) + ' Medium Wins: 0 Hard Wins: 0 Impossible Wins: 0 Total Wins: 0 Total Score: ' + str(intTotalPointsAdded) + '|' + '\n')  # Write string
+                    else:
+                        f.write(lines[i])
+                i+=1
+            f.close()
+            while not isLeaderboardSorted():
+                sortLeaderboard()
+    elif numUserRight == numAIRight:
+        print('Sorry, you have tied the bot. No points have been added to your total score.')
+    else:
+        print('Sorry, you lost to the bot. No points have been added to your total score')
+
+def mediumMode(userName, numHeadlines):
     print()
     numUserRight = 0
     numHeadLinesWentThrough = 0
@@ -285,7 +590,7 @@ def mediumMode(numHeadlines):
     percentChanceOfAIGettingItRight = 0
     print('Medium Mode in progress...')
 
-def hardMode(numHeadlines):
+def hardMode(userName, numHeadlines):
     print()
     numUserRight = 0
     numHeadLinesWentThrough = 0
@@ -293,13 +598,118 @@ def hardMode(numHeadlines):
     percentChanceOfAIGettingItRight = 0
     print('Hard Mode in progress...')
 
-def impossibleMode(numHeadlines):
+def impossibleMode(userName, numHeadlines):
     print()
     numUserRight = 0
     numHeadLinesWentThrough = 0
     numAIRight = 0
     percentChanceOfAIGettingItRight = 0
     print('Impossible Mode in progress...')
+
+def userNamePrompt():
+    print()
+    userName = input('User name: ')
+    print()
+
+    # Read file contents
+    count = 0
+    aUserName = ''
+    ifstream = open('usernamesAndPasswords.txt')
+    linesBeginning = ifstream.readlines()
+    ifstream.close()
+    # print(len(lines)) prints the amount of lines in the the txt file
+    i = 0
+    while i < len(linesBeginning):
+        if count == 0:
+            aUserName = ''
+            while ':' not in aUserName:
+                for letters in linesBeginning[i]:
+                    if ':' not in aUserName:
+                        aUserName = aUserName + letters
+            aUserName = aUserName[:-1]
+            if aUserName == userName:
+                count += 1
+                print('Enter your password so we know it is really you!')
+                password = input('Password (type "escape" to go back): ')
+                if password.lower() == 'escape':
+                    userName = userNamePrompt()
+                else:
+                    authenticatePassword(userName, password)
+                    print()
+                    print('Welcome back, ' + userName + '!')
+                    NEWUSERNAME = 0
+        i += 1
+    if count == 0:
+        print('Wow, a new user! Welcome, ' + userName + '!')
+        NEWUSERNAME = 1
+        print()
+        print('Enter a password for this user name for later use')
+        password = input('Password (type "escape" to go back): ')
+        if password.lower() == 'escape':
+            userName = userNamePrompt()
+        else:
+            f = open('usernamesAndPasswords.txt', 'a')  # Open file
+            f.write('\n' + userName + ':' + password + '|')  # Write string
+            f.close()  # Close the file
+
+    print()
+    return userName
+
+
+def authenticatePassword(userName, password):
+    # Read file contents
+    personalCount = 0
+    count = 0
+    i = 0
+    wrongTimesEntered = 0
+    timesLeftBeforeExit = 10
+    aUserName = ''
+    aPassword = '1$%d8cds823jr'
+    count = 0
+    ifstream = open('usernamesAndPasswords.txt')
+    linesPasswords = ifstream.readlines()
+    ifstream.close()
+    while i < len(linesPasswords):
+        personalCount = 0
+        if count == 0:
+            aUserName = ''
+            while ':' not in aUserName:
+                for letters in linesPasswords[i]:
+                    if ':' not in aUserName:
+                        aUserName = aUserName + letters
+            aUserName = aUserName[:-1]
+            if aUserName == userName:
+                aPassword = ''
+                for letters in linesPasswords[i]:
+                    if ':' not in aPassword and personalCount == 0:
+                        aPassword = aPassword + letters
+                    if ':' in aPassword and personalCount == 0:
+                        personalCount = 1
+                    if ':' in aPassword and personalCount == 1:
+                        aPassword = ''
+                        personalCount = 2
+                    if personalCount == 2 and '|' not in aPassword:
+                        aPassword = aPassword + letters
+                aPassword = aPassword[1:-1]
+                if aPassword == password:
+                    count += 1
+                else:
+                    while not (password == aPassword):
+                        timesLeftBeforeExit -= 1
+                        if (timesLeftBeforeExit == 0):
+                            print('You have entered your password incorrectly too many times, goodbye!')
+                            sys.exit()
+                        print('Your password is incorrect. Please retry! You have ' + str(timesLeftBeforeExit) + ' times left (case sensitive!!)')
+                        password = input('Password: ')
+
+        i += 1
+
+def welcomeMessage():
+    print()
+    print('Welcome to: "Commit to the Fake"! Please input your username and select an option to continue.'.format(TEAM))
+
+def endMessage():
+    print('Thank you for playing "Commit to the Fake"!'.format(TEAM))
 
 def __gen_colors(n):
     possible_foreground = list(range(30, 38)) + list(range(90, 98))
@@ -310,9 +720,7 @@ def __gen_colors(n):
     b_hsh = possible_background[bx]
 
     fmt = '\033[{0};{1}m'
-    # \e[103m with \e[96m is elixir
     if n == 68: return fmt.format(103, 96)
-    #\e[43m  with \e[37m is felix
     if n == 118: return fmt.format(43, 37)
     return fmt.format(f_hsh, b_hsh)
 
@@ -320,12 +728,92 @@ def __reset_colors(n):
     # default \e[49m \e[39m
     return '\033[49;39m'
 
+def sortLeaderboard():
+    '''
+     Requires: leaderboardData.txt is in the proper format
+     Modifies: leaderboardData.txt
+     Effects: returns a new list of a sorted leaderboard and then overwrites the current file
+     Sorts so that highest score is on top and the lowest total score
+     is on the bottom and the data is maintained while sorting
+     '''
+    i = 0
+    temp = ''
+    ifstream = open('leaderboardData.txt')
+    linesToSeeTotalScore = ifstream.readlines()
+    ifstream.close()
+    while i < len(linesToSeeTotalScore) - 1:
+        stringTotalScore = ''
+        stringTotalScorePlusOne = ''
+        stringLine = ''
+        stringLinePlusOne = ''
+        for letters in linesToSeeTotalScore[i][-8:]:
+            if letters == '0' or letters == '1' or letters == '2' or letters == '3' or letters == '4'\
+                    or letters == '5' or letters == '6' or letters == '7' or letters == '8' or letters == '9':
+                stringTotalScore += letters
+        for letters in linesToSeeTotalScore[i+1][-8:]:
+            if letters == '0' or letters == '1' or letters == '2' or letters == '3' or letters == '4'\
+                    or letters == '5' or letters == '6' or letters == '7' or letters == '8' or letters == '9':
+                stringTotalScorePlusOne += letters
+        if int(stringTotalScorePlusOne) > int(stringTotalScore):
+            for letters in linesToSeeTotalScore[i]:
+                stringLine += letters
+            for letters in linesToSeeTotalScore[i + 1]:
+                stringLinePlusOne += letters
+            #reversing the lines
+            temp = stringLine
+            stringLine = stringLinePlusOne
+            stringLinePlusOne = temp
+            linesToSeeTotalScore[i] = stringLine
+            linesToSeeTotalScore[i+1] = stringLinePlusOne
+        i += 1
+    i = 0
+    print(len(linesToSeeTotalScore))
+    f = open('leaderboardData.txt', 'w')  # Open file
+    while i < len(linesToSeeTotalScore):
+        f.write(linesToSeeTotalScore[i])  # Write string
+        i += 1
+    f.close()  # Close the file
+
+
+
+def isLeaderboardSorted():
+    '''
+    Requires: leaderboardData.txt is in the proper format
+    Modifies: Nothing
+    Effects: returns true if the leaderboard is sorted and returns false if the leaderboard is not sorted
+    '''
+    i = 0
+    check = 0
+    stringTotalScore = ''
+    stringTotalScorePlusOne = ''
+    ifstream = open('leaderboardData.txt')
+    linesToSeeTotalScore = ifstream.readlines()
+    ifstream.close()
+    while i < len(linesToSeeTotalScore) - 1:
+        stringTotalScore = ''
+        stringTotalScorePlusOne = ''
+        for letters in linesToSeeTotalScore[i][-8:]:
+            if letters == '0' or letters == '1' or letters == '2' or letters == '3' or letters == '4'\
+                    or letters == '5' or letters == '6' or letters == '7' or letters == '8' or letters == '9':
+                stringTotalScore += letters
+        for letters in linesToSeeTotalScore[i+1][-8:]:
+            if letters == '0' or letters == '1' or letters == '2' or letters == '3' or letters == '4'\
+                    or letters == '5' or letters == '6' or letters == '7' or letters == '8' or letters == '9':
+                stringTotalScorePlusOne += letters
+        if int(stringTotalScorePlusOne) > int(stringTotalScore):
+            check += 1
+        i += 1
+    if check == 0:
+        return True
+    else:
+        return False
+
 ###############################################################################
-# End Core
+# End REACH FUNCTIONS
 ###############################################################################
 
 ###############################################################################
-# Main
+# BEGIN Main FUNCTION FOR REACH
 ###############################################################################
 
 PROMPT1 = __gen_colors(350) + 'Print Instructions'
@@ -336,7 +824,7 @@ PROMPT = [
     'Print High Scores',
     'Print Rank Based on UserName',
     'Play the Game',
-    'Change Username',
+    'Change User',
     'Quit the game'
 ]
 
@@ -369,21 +857,14 @@ def main():
     Effects:  This is your main function, which is done for you. It runs the
               entire generator program for both the reach and the core.
 
-              It prompts the user to choose to generate either lyrics or music.
+              It prompts the user to choose to generate either headlines or music.
     """
 
     mainMenu = Menu(PROMPT)
-
-    print()
-    print('Welcome to: "Commit to the Fake"! Please input your username and select an option to continue.'.format(TEAM))
-    print()
-    userName = input('User name: ')
-    print()
-    print('Hello, ' + userName + '!')
-    print()
+    welcomeMessage()
+    userName = userNamePrompt()
     while True:
         userInput = mainMenu.getChoice()
-        print ()
         if userInput == 1:
             print(INSTRUCTIONS)
         elif userInput == 2:
@@ -391,14 +872,11 @@ def main():
         elif userInput == 3:
             printRankBasedOnTotalPlayers(userName)
         elif userInput == 4:
-            playGame()
+            playGame(userName)
         elif userInput == 5:
-            print('Enter in your new user name.')
-            userName = input('User name: ')
-            print('Hello, ' + userName + '!')
-            print()
+            userName = userNamePrompt()
         elif userInput == 6:
-            print('Thank you for playing "Commit to the Fake"!'.format(TEAM))
+            endMessage()
             sys.exit()
 
 if __name__ == '__main__':

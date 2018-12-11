@@ -10,7 +10,7 @@ class LyricsWikiaScraper(BaseScraper):
         This is the constructor for the LyricsWikiaScraper.
         It sets the values for specific data needed for the scraper.
         """
-        self.hostUrl = "lyrics.wikia.com"
+        self.hostUrl = "headlines.wikia.com"
         self.generalArtistPath = "/wiki/Category:Songs_by_" # note: case matters
         self.spaceChar = "_"
         self.delay = 1.0
@@ -96,21 +96,21 @@ class LyricsWikiaScraper(BaseScraper):
 
     def getSongLyrics(self, html):
         """
-        Returns a single string of the lyrics for the song specified
+        Returns a single string of the headlines for the song specified
         in the html.
 
-        Gets an approximation of where the lyrics begin, then finds the
+        Gets an approximation of where the headlines begin, then finds the
         exact start after skipping any Javascript. Gets an exact end for
-        the lyrics by finding an HTML comment.
+        the headlines by finding an HTML comment.
 
         This website has lyric characters given in HTML ASCII values
         (i.e. &#89; for Y), so the loop deals with converting those values
-        into Python strings via ASCII lookup. Note that some lyrics
+        into Python strings via ASCII lookup. Note that some headlines
         contain symbols, blank lines, or HTML tags such as <i>.
         The loop attempts to mitigate this.
         """
         # apparently lyricsWikia has updated their site and now
-        # lyrics begin in a div with class lyricbox
+        # headlines begin in a div with class lyricbox
         exactStart = '<div class=\'lyricbox\'>'
         startIndex = html.find(exactStart) + len(exactStart)
 
@@ -138,7 +138,7 @@ class LyricsWikiaScraper(BaseScraper):
 
     def saveLyrics(self, title, relativeUrl, dirName):
         """
-        Saves the lyrics for the song at self.hostUrl + relativeUrl to
+        Saves the headlines for the song at self.hostUrl + relativeUrl to
         the directory specified by dirName in a file called <title>.txt.
         """
         html = self.getPageHtml(relativeUrl)
@@ -153,7 +153,7 @@ class LyricsWikiaScraper(BaseScraper):
     def scrape(self, artist):
         """
         Prompts user for artist input.
-        Gets all available song lyrics for the artist <artist>
+        Gets all available song headlines for the artist <artist>
         and saves each individual song to the data/music/<artist>
         folder in a file called <title>.txt.
         """
@@ -173,13 +173,13 @@ class LyricsWikiaScraper(BaseScraper):
         paginatedUrls = self.getSongUrlsWithPagination(artistFirstPageHtml)
         urlByTitle.update(paginatedUrls)
         print "\nFound", len(urlByTitle), "songs by", formattedArtistName,
-        print "with lyrics at", self.hostUrl
+        print "with headlines at", self.hostUrl
 
         # make artistDir (data/music/<artist>) and then save files of
-        # song lyrics to that directory
+        # song headlines to that directory
         # scriptDir is the absolute path to this script, baseScraper.py
         scriptDir = os.path.dirname(os.path.abspath(__file__))
-        artistDir = os.path.join(scriptDir, '../lyrics', \
+        artistDir = os.path.join(scriptDir, '../headlines', \
                                  re.sub(" ", "_", artist))
 
         # avoid remaking an existing directory

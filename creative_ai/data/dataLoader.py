@@ -61,7 +61,7 @@ def loadSavedMusic(dirName):
 
 def loadLyrics(dirName):
     """
-    Loads the lyrics files from the directory specified by dirName,
+    Loads the headlines files from the directory specified by dirName,
     if that directory exists. For each line in each file,
     cleans that line by removing punctuation and extraneous
     whitespaces, and lowercasing all words in the line.
@@ -72,7 +72,7 @@ def loadLyrics(dirName):
     except:
         pass
 
-    lyricsDir = os.path.dirname(os.path.abspath(__file__)) + "/lyrics/"
+    lyricsDir = os.path.dirname(os.path.abspath(__file__)) + "/headlines/"
     artistDir = os.path.join(lyricsDir, dirName) + "/"
 
     if not os.path.isdir(artistDir):
@@ -238,6 +238,6 @@ def formatDuration(asciiDuration):
     return duration
 
 if __name__ == "__main__":
-    lyrics = loadLyrics('the_beatles')
+    lyrics = loadLyrics('stupidfile')
     for line in lyrics:
         print(line)
