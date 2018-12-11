@@ -140,6 +140,7 @@ def generateTokenSentence(model, desiredLength):
     return sentence[2:]
 
 ###############################################################################
+<<<<<<< HEAD
 # End CORE
 ###############################################################################
 
@@ -163,6 +164,11 @@ def checkToSeeIfHeadlineIsUsed(string):
     else:
         return False
 
+=======
+# Begin REACH
+###############################################################################
+
+>>>>>>> 996cce10fe97b231a1c70e35c1417c2a75659449
 def printHighScores():
     # Read file contents
     ifstream = open('leaderboardData.txt')
@@ -632,21 +638,35 @@ def userNamePrompt():
                 print('Enter your password so we know it is really you!')
                 password = input('Password (type "escape" to go back): ')
                 if password.lower() == 'escape':
+<<<<<<< HEAD
                     userName = userNamePrompt()
+=======
+                    userNamePrompt()
+>>>>>>> 996cce10fe97b231a1c70e35c1417c2a75659449
                 else:
                     authenticatePassword(userName, password)
                     print()
                     print('Welcome back, ' + userName + '!')
+<<<<<<< HEAD
                     NEWUSERNAME = 0
         i += 1
     if count == 0:
         print('Wow, a new user! Welcome, ' + userName + '!')
         NEWUSERNAME = 1
+=======
+        i += 1
+    if count == 0:
+        print('Wow, a new user! Welcome, ' + userName + '!')
+>>>>>>> 996cce10fe97b231a1c70e35c1417c2a75659449
         print()
         print('Enter a password for this user name for later use')
         password = input('Password (type "escape" to go back): ')
         if password.lower() == 'escape':
+<<<<<<< HEAD
             userName = userNamePrompt()
+=======
+            userNamePrompt()
+>>>>>>> 996cce10fe97b231a1c70e35c1417c2a75659449
         else:
             f = open('usernamesAndPasswords.txt', 'a')  # Open file
             f.write('\n' + userName + ':' + password + '|')  # Write string
@@ -656,6 +676,11 @@ def userNamePrompt():
     return userName
 
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 996cce10fe97b231a1c70e35c1417c2a75659449
 def authenticatePassword(userName, password):
     # Read file contents
     personalCount = 0
