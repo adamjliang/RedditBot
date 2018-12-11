@@ -51,7 +51,7 @@ class LanguageModel():
         Requires: text is a 2D list of strings
         Modifies: self (this instance of the LanguageModel object)
         Effects:  adds new trained data to each of the languageModel models.
-        If this data is not prepped (prepped==False) then it is prepepd first
+        If this data is not prepped (prepped==False) then it is prepped first
         before being passed to the models.
 
         This function is done for you.
