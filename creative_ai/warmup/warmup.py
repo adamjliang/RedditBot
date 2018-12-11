@@ -17,8 +17,8 @@ def returnDictionary(D):
     Effects:  Returns the input dictionary D unchanged.
     >>> returnDictionary({})
     {}
-    >>> lyrics = {'a': 'hard', 'days': 'night'}
-    >>> returnDictionary(lyrics) == {'a': 'hard', 'days': 'night'}
+    >>> headlines = {'a': 'hard', 'days': 'night'}
+    >>> returnDictionary(headlines) == {'a': 'hard', 'days': 'night'}
     True
     """
     return D
@@ -31,10 +31,10 @@ def keyInDict(D, K):
               Hint: use the 'in' operator
     >>> keyInDict({}, 'night')
     False
-    >>> lyrics = {'a': 'hard', 'days': 'night'}
-    >>> keyInDict(lyrics, 'days')
+    >>> headlines = {'a': 'hard', 'days': 'night'}
+    >>> keyInDict(headlines, 'days')
     True
-    >>> keyInDict(lyrics, 'postman')
+    >>> keyInDict(headlines, 'postman')
     False
     """
     if K in D:
@@ -48,10 +48,10 @@ def returnKeyVal(D, K):
     Requires: D is a dictionary and K is a key in D
     Modifies: Nothing
     Effects:  Returns the value associated with K in the dictionary D.
-    >>> lyrics = {'wait': 'a', 'minute': 'mister', 'postman': {}}
-    >>> returnKeyVal(lyrics, 'wait')
+    >>> headlines = {'wait': 'a', 'minute': 'mister', 'postman': {}}
+    >>> returnKeyVal(headlines, 'wait')
     'a'
-    >>> returnKeyVal(lyrics, 'postman')
+    >>> returnKeyVal(headlines, 'postman')
     {}
     """
     return D[K]
