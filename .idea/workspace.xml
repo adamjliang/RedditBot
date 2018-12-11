@@ -2,9 +2,720 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fc7f2d21-6084-4011-b3d6-32ffc5a66c99" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/RedditBot/Part1/bot_read.py" beforeDir="false" afterPath="$PROJECT_DIR$/RedditBot/Part1/bot_read.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RedditBot/Part2/reply_post.py" beforeDir="false" afterPath="$PROJECT_DIR$/RedditBot/Part2/reply_post.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/creative_ai/warmup/warmup.py" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/warmup/warmup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/dataLoader.py" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/dataLoader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline10.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline10.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline100.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline100.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline101.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline101.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline102.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline102.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline103.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline103.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline104.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline104.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline105.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline105.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline106.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline106.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline107.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline107.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline108.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline108.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline109.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline109.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline11.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline11.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline110.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline110.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline111.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline111.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline112.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline112.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline113.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline113.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline114.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline114.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline115.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline115.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline116.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline116.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline117.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline117.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline118.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline118.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline119.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline119.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline12.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline12.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline120.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline120.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline121.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline121.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline122.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline122.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline123.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline123.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline124.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline124.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline125.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline125.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline126.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline126.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline127.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline127.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline128.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline128.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline129.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline129.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline13.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline13.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline130.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline130.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline131.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline131.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline132.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline132.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline133.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline133.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline134.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline134.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline135.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline135.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline136.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline136.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline137.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline137.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline138.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline138.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline139.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline139.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline14.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline14.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline140.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline140.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline141.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline141.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline142.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline142.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline143.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline143.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline144.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline144.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline145.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline145.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline146.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline146.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline147.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline147.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline148.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline148.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline149.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline149.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline15.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline15.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline150.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline150.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline151.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline151.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline152.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline152.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline153.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline153.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline154.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline154.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline155.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline155.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline156.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline156.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline157.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline157.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline158.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline158.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline159.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline159.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline16.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline16.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline160.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline160.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline161.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline161.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline162.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline162.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline163.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline163.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline164.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline164.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline165.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline165.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline166.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline166.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline167.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline167.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline168.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline168.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline169.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline169.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline17.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline17.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline170.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline170.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline171.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline171.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline172.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline172.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline173.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline173.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline174.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline174.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline175.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline175.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline176.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline176.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline177.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline177.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline178.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline178.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline179.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline179.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline18.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline18.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline180.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline180.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline181.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline181.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline182.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline182.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline183.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline183.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline184.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline184.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline185.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline185.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline186.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline186.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline187.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline187.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline188.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline188.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline189.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline189.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline19.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline19.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline190.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline190.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline191.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline191.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline192.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline192.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline193.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline193.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline194.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline194.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline195.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline195.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline196.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline196.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline197.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline197.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline198.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline198.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline199.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline199.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline20.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline20.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline200.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline200.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline201.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline201.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline202.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline202.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline203.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline203.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline204.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline204.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline205.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline205.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline206.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline206.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline207.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline207.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline208.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline208.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline209.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline209.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline21.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline21.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline210.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline210.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline211.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline211.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline212.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline212.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline213.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline213.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline214.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline214.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline215.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline215.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline216.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline216.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline217.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline217.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline218.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline218.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline219.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline219.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline22.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline22.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline220.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline220.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline221.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline221.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline222.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline222.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline223.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline223.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline224.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline224.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline225.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline225.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline226.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline226.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline227.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline227.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline228.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline228.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline229.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline229.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline23.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline23.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline230.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline230.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline231.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline231.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline232.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline232.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline233.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline233.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline234.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline234.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline235.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline235.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline236.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline236.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline237.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline237.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline238.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline238.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline239.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline239.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline24.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline24.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline240.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline240.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline241.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline241.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline242.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline242.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline243.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline243.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline244.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline244.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline245.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline245.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline246.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline246.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline247.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline247.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline248.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline248.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline249.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline249.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline25.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline25.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline250.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline250.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline251.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline251.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline252.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline252.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline253.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline253.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline254.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline254.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline255.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline255.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline256.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline256.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline257.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline257.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline258.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline258.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline259.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline259.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline26.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline26.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline260.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline260.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline261.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline261.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline262.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline262.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline263.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline263.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline264.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline264.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline265.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline265.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline266.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline266.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline267.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline267.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline268.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline268.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline269.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline269.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline27.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline27.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline270.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline270.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline271.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline271.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline272.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline272.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline273.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline273.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline274.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline274.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline275.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline275.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline276.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline276.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline277.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline277.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline278.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline278.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline279.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline279.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline28.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline28.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline280.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline280.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline281.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline281.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline282.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline282.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline283.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline283.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline284.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline284.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline285.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline285.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline286.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline286.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline287.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline287.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline288.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline288.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline289.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline289.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline29.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline29.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline290.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline290.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline291.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline291.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline292.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline292.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline293.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline293.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline294.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline294.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline295.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline295.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline296.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline296.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline297.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline297.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline298.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline298.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline299.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline299.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline30.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline30.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline300.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline300.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline301.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline301.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline302.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline302.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline303.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline303.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline304.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline304.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline305.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline305.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline306.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline306.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline307.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline307.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline308.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline308.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline309.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline309.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline31.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline31.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline310.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline310.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline311.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline311.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline312.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline312.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline313.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline313.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline314.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline314.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline315.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline315.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline316.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline316.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline317.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline317.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline318.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline318.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline319.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline319.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline32.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline32.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline320.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline320.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline321.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline321.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline322.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline322.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline323.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline323.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline324.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline324.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline325.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline325.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline326.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline326.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline327.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline327.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline328.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline328.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline329.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline329.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline33.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline33.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline330.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline330.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline331.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline331.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline332.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline332.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline333.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline333.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline334.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline334.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline335.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline335.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline336.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline336.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline337.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline337.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline338.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline338.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline339.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline339.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline34.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline34.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline340.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline340.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline341.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline341.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline342.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline342.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline343.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline343.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline344.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline344.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline345.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline345.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline346.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline346.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline347.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline347.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline348.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline348.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline349.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline349.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline35.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline35.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline350.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline350.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline351.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline351.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline352.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline352.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline353.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline353.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline354.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline354.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline355.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline355.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline356.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline356.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline357.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline357.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline358.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline358.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline359.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline359.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline36.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline36.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline360.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline360.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline361.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline361.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline362.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline362.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline363.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline363.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline364.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline364.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline365.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline365.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline366.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline366.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline367.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline367.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline368.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline368.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline369.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline369.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline37.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline37.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline370.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline370.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline371.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline371.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline372.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline372.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline373.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline373.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline374.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline374.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline375.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline375.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline376.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline376.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline377.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline377.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline378.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline378.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline379.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline379.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline38.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline38.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline380.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline380.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline381.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline381.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline382.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline382.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline383.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline383.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline384.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline384.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline385.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline385.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline386.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline386.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline387.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline387.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline388.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline388.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline389.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline389.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline39.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline39.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline390.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline390.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline391.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline391.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline392.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline392.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline393.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline393.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline394.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline394.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline395.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline395.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline396.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline396.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline397.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline397.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline398.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline398.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline399.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline399.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline4.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline40.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline40.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline400.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline400.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline401.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline401.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline402.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline402.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline403.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline403.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline404.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline404.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline405.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline405.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline406.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline406.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline407.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline407.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline408.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline408.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline409.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline409.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline41.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline41.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline410.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline410.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline411.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline411.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline412.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline412.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline413.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline413.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline414.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline414.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline415.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline415.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline416.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline416.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline417.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline417.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline418.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline418.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline419.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline419.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline42.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline42.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline420.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline420.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline421.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline421.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline422.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline422.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline423.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline423.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline424.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline424.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline425.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline425.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline426.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline426.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline427.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline427.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline428.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline428.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline429.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline429.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline43.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline43.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline430.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline430.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline431.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline431.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline432.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline432.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline433.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline433.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline434.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline434.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline435.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline435.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline436.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline436.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline437.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline437.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline438.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline438.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline439.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline439.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline44.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline44.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline440.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline440.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline441.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline441.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline442.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline442.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline443.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline443.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline444.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline444.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline445.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline445.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline446.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline446.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline447.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline447.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline448.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline448.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline449.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline449.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline45.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline45.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline450.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline450.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline451.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline451.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline452.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline452.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline453.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline453.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline454.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline454.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline455.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline455.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline456.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline456.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline457.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline457.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline458.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline458.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline459.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline459.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline46.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline46.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline460.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline460.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline461.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline461.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline462.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline462.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline463.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline463.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline464.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline464.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline465.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline465.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline466.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline466.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline467.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline467.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline468.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline468.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline469.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline469.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline47.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline47.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline470.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline470.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline471.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline471.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline472.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline472.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline473.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline473.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline474.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline474.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline475.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline475.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline476.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline476.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline477.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline477.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline478.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline478.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline479.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline479.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline48.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline48.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline480.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline480.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline481.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline481.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline482.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline482.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline483.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline483.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline484.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline484.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline485.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline485.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline486.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline486.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline487.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline487.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline488.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline488.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline489.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline489.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline49.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline49.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline490.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline490.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline491.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline491.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline492.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline492.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline493.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline493.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline494.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline494.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline495.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline495.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline496.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline496.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline497.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline497.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline498.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline498.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline499.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline499.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline5.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline50.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline50.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline500.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline500.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline501.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline501.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline502.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline502.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline503.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline503.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline504.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline504.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline505.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline505.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline506.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline506.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline507.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline507.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline508.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline508.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline509.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline509.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline51.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline51.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline510.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline510.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline511.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline511.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline512.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline512.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline513.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline513.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline514.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline514.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline515.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline515.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline516.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline516.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline517.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline517.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline518.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline518.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline519.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline519.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline52.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline52.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline520.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline520.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline521.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline521.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline522.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline522.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline523.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline523.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline524.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline524.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline525.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline525.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline526.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline526.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline527.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline527.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline528.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline528.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline529.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline529.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline53.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline53.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline530.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline530.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline531.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline531.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline532.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline532.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline533.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline533.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline534.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline534.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline535.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline535.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline536.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline536.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline537.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline537.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline538.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline538.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline539.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline539.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline54.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline54.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline540.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline540.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline541.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline541.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline542.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline542.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline543.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline543.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline544.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline544.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline545.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline545.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline546.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline546.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline547.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline547.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline548.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline548.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline549.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline549.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline55.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline55.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline550.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline550.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline551.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline551.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline552.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline552.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline553.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline553.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline554.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline554.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline555.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline555.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline556.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline556.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline557.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline557.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline558.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline558.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline559.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline559.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline56.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline56.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline560.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline560.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline561.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline561.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline562.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline562.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline563.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline563.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline564.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline564.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline565.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline565.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline566.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline566.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline567.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline567.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline568.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline568.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline569.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline569.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline57.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline57.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline570.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline570.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline571.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline571.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline572.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline572.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline573.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline573.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline574.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline574.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline575.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline575.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline576.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline576.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline577.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline577.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline578.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline578.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline579.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline579.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline58.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline58.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline580.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline580.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline581.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline581.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline582.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline582.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline583.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline583.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline584.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline584.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline585.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline585.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline586.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline586.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline587.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline587.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline588.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline588.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline589.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline589.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline59.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline59.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline590.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline590.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline591.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline591.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline592.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline592.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline593.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline593.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline594.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline594.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline595.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline595.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline596.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline596.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline597.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline597.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline598.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline598.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline599.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline599.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline6.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline60.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline60.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline600.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline600.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline601.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline601.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline602.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline602.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline603.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline603.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline604.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline604.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline605.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline605.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline606.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline606.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline607.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline607.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline608.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline608.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline609.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline609.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline61.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline61.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline610.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline610.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline611.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline611.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline612.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline612.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline613.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline613.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline614.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline614.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline615.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline615.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline616.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline616.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline617.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline617.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline618.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline618.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline619.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline619.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline62.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline62.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline620.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline620.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline621.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline621.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline622.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline622.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline623.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline623.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline624.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline624.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline625.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline625.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline626.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline626.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline627.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline627.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline628.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline628.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline629.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline629.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline63.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline63.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline630.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline630.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline631.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline631.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline632.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline632.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline633.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline633.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline634.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline634.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline635.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline635.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline636.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline636.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline637.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline637.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline638.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline638.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline639.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline639.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline64.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline64.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline640.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline640.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline641.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline641.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline642.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline642.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline643.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline643.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline644.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline644.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline645.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline645.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline646.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline646.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline647.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline647.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline648.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline648.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline649.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline649.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline65.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline65.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline650.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline650.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline651.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline651.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline652.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline652.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline653.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline653.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline654.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline654.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline655.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline655.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline656.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline656.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline657.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline657.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline658.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline658.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline659.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline659.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline66.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline66.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline660.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline660.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline661.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline661.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline662.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline662.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline663.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline663.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline664.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline664.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline665.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline665.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline666.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline666.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline667.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline667.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline668.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline668.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline669.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline669.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline67.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline67.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline670.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline670.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline671.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline671.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline672.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline672.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline673.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline673.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline674.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline674.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline675.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline675.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline676.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline676.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline677.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline677.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline678.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline678.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline679.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline679.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline68.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline68.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline680.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline680.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline681.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline681.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline682.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline682.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline683.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline683.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline684.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline684.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline685.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline685.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline686.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline686.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline687.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline687.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline688.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline688.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline689.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline689.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline69.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline69.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline690.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline690.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline691.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline691.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline692.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline692.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline693.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline693.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline694.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline694.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline695.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline695.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline696.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline696.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline697.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline697.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline698.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline698.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline699.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline699.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline7.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline70.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline70.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline700.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline700.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline701.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline701.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline702.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline702.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline703.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline703.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline704.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline704.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline705.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline705.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline706.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline706.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline707.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline707.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline708.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline708.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline709.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline709.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline71.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline71.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline72.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline72.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline73.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline73.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline74.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline74.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline75.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline75.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline76.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline76.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline77.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline77.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline78.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline78.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline79.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline79.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline8.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline8.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline80.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline80.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline81.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline81.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline82.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline82.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline83.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline83.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline84.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline84.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline85.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline85.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline86.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline86.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline87.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline87.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline88.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline88.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline89.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline89.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline9.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline9.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline90.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline90.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline91.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline91.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline92.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline92.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline93.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline93.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline94.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline94.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline95.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline95.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline96.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline96.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline97.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline97.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline98.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline98.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline99.txt" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline99.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/data/saved/headlines.json" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/data/saved/headlines.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creative_ai/generate.py" beforeDir="false" afterPath="$PROJECT_DIR$/creative_ai/generate.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,22 +725,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RedditBot/Part2/reply_post.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="46" selection-start-line="46" selection-end-line="49" selection-end-column="73" />
-              <folding>
-                <element signature="e#18#29#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/creative_ai/generate.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1264">
+            <state relative-caret-position="1398">
               <caret line="213" column="77" selection-start-line="213" selection-start-column="77" selection-end-line="213" selection-end-column="77" />
             </state>
           </provider>
@@ -38,8 +737,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/creative_ai/data/saved/headlines.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="113">
-              <caret line="3276" column="16" selection-start-line="3276" selection-start-column="9" selection-end-line="3276" selection-end-column="16" />
+            <state relative-caret-position="84">
+              <caret line="5744" column="17" lean-forward="true" selection-start-line="5744" selection-start-column="17" selection-end-line="5744" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -71,7 +770,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>lyricsDir</find>
       <find>joe</find>
       <find>the_</find>
       <find>check</find>
@@ -101,6 +799,7 @@
       <find>lyrics</find>
       <find>supreme</find>
       <find>playgame</find>
+      <find>okay</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -158,8 +857,8 @@
         <option value="$PROJECT_DIR$/RedditBot/Part2/reply_post.py" />
         <option value="$PROJECT_DIR$/praw/praw.ini" />
         <option value="$PROJECT_DIR$/creative_ai/data/saved/the_beatles_test.json" />
-        <option value="$PROJECT_DIR$/creative_ai/data/saved/headlines.json" />
         <option value="$PROJECT_DIR$/creative_ai/generate.py" />
+        <option value="$PROJECT_DIR$/creative_ai/data/saved/headlines.json" />
       </list>
     </option>
   </component>
@@ -189,6 +888,19 @@
               <item name="Creative_AI_3040_Repository" type="b2602c69:ProjectViewProjectNode" />
               <item name="Creative_AI_3040_Repository" type="462c0819:PsiDirectoryNode" />
               <item name="creative_ai" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Creative_AI_3040_Repository" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Creative_AI_3040_Repository" type="462c0819:PsiDirectoryNode" />
+              <item name="creative_ai" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Creative_AI_3040_Repository" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Creative_AI_3040_Repository" type="462c0819:PsiDirectoryNode" />
+              <item name="creative_ai" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="headlines" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -406,107 +1118,107 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline13.txt">
+    <entry file="file://$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline13.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline14.txt">
+    <entry file="file://$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline14.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="41" selection-start-column="41" selection-end-column="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline15.txt">
+    <entry file="file://$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline15.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="17" selection-start-column="17" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline16.txt">
+    <entry file="file://$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline16.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline17.txt">
+    <entry file="file://$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline17.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline18.txt">
+    <entry file="file://$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline18.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="38" lean-forward="true" selection-start-column="38" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline19.txt">
+    <entry file="file://$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline19.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline20.txt">
+    <entry file="file://$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline20.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline21.txt">
+    <entry file="file://$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline21.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline22.txt">
+    <entry file="file://$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline22.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="27" selection-start-column="27" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline23.txt">
+    <entry file="file://$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline23.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline24.txt">
+    <entry file="file://$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline24.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="30" lean-forward="true" selection-start-column="30" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline25.txt">
+    <entry file="file://$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline25.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline26.txt">
+    <entry file="file://$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline26.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline27.txt">
+    <entry file="file://$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline27.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="12" selection-start-column="12" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline28.txt">
+    <entry file="file://$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline28.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline29.txt">
+    <entry file="file://$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline29.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="12" lean-forward="true" selection-start-column="12" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline30.txt">
+    <entry file="file://$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline30.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="21" selection-start-column="21" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline31.txt">
+    <entry file="file://$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline31.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="52" lean-forward="true" selection-start-column="52" selection-end-column="52" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline32.txt">
+    <entry file="file://$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline32.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="54" selection-start-column="54" selection-end-column="54" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline70.txt">
+    <entry file="file://$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline70.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/creative_ai/models/bigramModel.py">
@@ -516,16 +1228,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline198.txt">
+    <entry file="file://$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline198.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline197.txt">
+    <entry file="file://$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline197.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline196.txt">
+    <entry file="file://$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline196.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline193.txt">
+    <entry file="file://$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline193.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/RedditBot/Marvin/marvin_bot.py">
@@ -579,7 +1291,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/creative_ai/data/headlines/stupidfile/headline.txt">
+    <entry file="file://$PROJECT_DIR$/creative_ai/data/headlines/headlinesagain/headline.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="1" selection-start-column="1" selection-end-column="1" />
@@ -644,13 +1356,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/creative_ai/data/saved/headlines.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="3276" column="16" selection-start-line="3276" selection-start-column="9" selection-end-line="3276" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/praw/praw.ini">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -658,9 +1363,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/creative_ai/data/saved/headlines.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="5744" column="17" lean-forward="true" selection-start-line="5744" selection-start-column="17" selection-end-line="5744" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/creative_ai/generate.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1264">
+        <state relative-caret-position="1398">
           <caret line="213" column="77" selection-start-line="213" selection-start-column="77" selection-end-line="213" selection-end-column="77" />
         </state>
       </provider>

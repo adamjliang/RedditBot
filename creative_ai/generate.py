@@ -22,7 +22,7 @@ from creative_ai.models.languageModel import LanguageModel
 
 # FIXME Add your team name
 TEAM = 'Lets Git This Bread'
-LYRICSDIRS = ['stupidfile']
+LYRICSDIRS = ['headlinesagain']
 TESTLYRICSDIRS = ['headlines']
 
 def output_models(val, output_fn = None):

@@ -238,6 +238,6 @@ def formatDuration(asciiDuration):
     return duration
 
 if __name__ == "__main__":
-    lyrics = loadLyrics('stupidfile')
+    lyrics = loadLyrics('headlinesagain')
     for line in lyrics:
         print(line)
