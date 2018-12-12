@@ -207,7 +207,6 @@ def printRankBasedOnTotalPlayers(userName):
         print()
 
 def playGame(userName):
-
     # posting generated text in reddit
     subreddit = reddit.subreddit('eecs183')
 
@@ -309,9 +308,7 @@ def beginnerMode(userName, numHeadlines):
             choice = input('Choice: ')
 
         while i < len(lines):
-            if gameList[int(choice) - 1] == lines[i]:
-                print()
-                print('Incorrect!!')
+            if gameList[int(choice) - 1] == lines[i][:-1]:
                 count += 1
             i += 1
 
@@ -319,6 +316,9 @@ def beginnerMode(userName, numHeadlines):
             print()
             print('Correct!!')
             numUserRight += 1
+        else:
+            print()
+            print('Incorrect!!')
 
         randomIntForAI = random.randint(1, 10)
         if randomIntForAI == 1:
@@ -477,11 +477,8 @@ def easyMode(userName, numHeadlines):
             print('Invalid choice! Choice must be 1, 2, or 3')
             choice = input('Choice: ')
 
-
         while i < len(lines):
-            if gameList[int(choice) - 1] == lines[i]:
-                print()
-                print('Incorrect!!')
+            if gameList[int(choice) - 1] == lines[i][:-1]:
                 count += 1
             i += 1
 
@@ -489,6 +486,9 @@ def easyMode(userName, numHeadlines):
             print()
             print('Correct!!')
             numUserRight += 1
+        else:
+            print()
+            print('Incorrect!!')
 
         randomIntForAI = random.randint(1, 3)
         if randomIntForAI == 1:
