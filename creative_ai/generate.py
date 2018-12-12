@@ -207,6 +207,9 @@ def printRankBasedOnTotalPlayers(userName):
         print()
 
 def playGame(userName):
+    # Create the Reddit instance
+    reddit = praw.Reddit('bot1')
+
     # posting generated text in reddit
     subreddit = reddit.subreddit('eecs183')
 
@@ -285,18 +288,24 @@ def beginnerMode(userName, numHeadlines):
             if realLeft > 0 and fakeLeft > 0:
                 randomInt = random.randint(1, 2)
                 if randomInt == 1:
-                    gameList[gameListCount] = myString
+                    gameList[gameListCount] = myString[:-1]
                     realLeft -= 1
                 elif randomInt == 2:
-                    gameList[gameListCount] = 'FAKE'
-                    # generate fake here and assign it to gameList[gameListCount]
+                    headlineTrained = False
+                    if not headlineTrained:
+                        headlineModel = trainHeadlineModels(TESTLYRICSDIRS)
+                        headlineTrained = True
+                    gameList[gameListCount] = runHeadlineGenerator(headlineModel)
                     fakeLeft -= 1
             elif realLeft > 0 and fakeLeft == 0:
-                gameList[gameListCount] = myString
+                gameList[gameListCount] = myString[:-1]
                 realLeft -= 1
             elif fakeLeft > 0 and realLeft == 0:
-                gameList[gameListCount] = 'FAKE'
-                # generate fake here and assign it to gameList[gameListCount]
+                headlineTrained = False
+                if not headlineTrained:
+                    headlineModel = trainHeadlineModels(TESTLYRICSDIRS)
+                    headlineTrained = True
+                gameList[gameListCount] = runHeadlineGenerator(headlineModel)
                 fakeLeft -= 1
             gameListCount += 1
         # here the reddit bot will output the titles but ill just do it here for testing
