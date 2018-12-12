@@ -502,7 +502,7 @@ def easyMode(userName, numHeadlines):
             print()
             print('Incorrect!!')
             print()
-            print('The correct answer was: ' + gameList[theFakeIndex][:-1])
+            print('The correct answer was: ' + gameList[theFakeIndex])
 
         randomIntForAI = random.randint(1, 3)
         if randomIntForAI == 1:
