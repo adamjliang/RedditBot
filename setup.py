@@ -8,6 +8,8 @@ setup(
     include_package_data=True,
     install_requires=[
         'tqdm',
-        'click'
+        'click',
+        'spacy',
+        'praw',
     ]
 )
