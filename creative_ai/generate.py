@@ -483,7 +483,7 @@ def easyMode(userName, numHeadlines):
                 verses = ['1', '2', '3', '4']
                 submission.reply('1) "' + gameList[0] + '",' + '\n' + ' 2) "' + gameList[1] + '",' + '\n' + ' 3) "' + gameList[2] + '"')
         #print(gameList)
-        print('Choose which one is the fake!! (1/2/3)')
+        print('Question Number ' + str(n+1) + ': Choose which one is the fake!! (1/2/3)')
         choice = input('Choice: ')
         while not (choice == '1' or choice == '2' or choice == '3'):
             print('Invalid choice! Choice must be 1, 2, or 3')
