@@ -424,8 +424,6 @@ def easyMode(userName, numHeadlines):
     numAIRight = 0
     percentChanceOfAIGettingItRight = 1.0/3.0
     while n < numHeadlines:
-        numUserRight = 0
-        numAIRight = 0
         myString = ''
         #Possibly include myRandomInt
         realLeft = 2
