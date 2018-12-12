@@ -433,6 +433,7 @@ def easyMode(userName, numHeadlines):
     numAIRight = 0
     percentChanceOfAIGettingItRight = 1.0/3.0
     while n < numHeadlines:
+        theFakeIndex = 0
         myString = ''
         #Possibly include myRandomInt
         realLeft = 2
@@ -459,6 +460,7 @@ def easyMode(userName, numHeadlines):
                         headlineTrained = True
                     gameList[gameListCount] = runHeadlineGenerator(headlineModel)
                     fakeLeft -= 1
+                    theFakeIndex = gameListCount
             elif realLeft > 0 and fakeLeft == 0:
                 gameList[gameListCount] = myString[:-1]
                 realLeft -= 1
@@ -469,6 +471,7 @@ def easyMode(userName, numHeadlines):
                     headlineTrained = True
                 gameList[gameListCount] = runHeadlineGenerator(headlineModel)
                 fakeLeft -= 1
+                theFakeIndex = gameListCount
             gameListCount += 1
         #here the reddit bot will output the titles but ill just do it here for testing
         # Get the top 5 values from our subreddit
@@ -498,6 +501,8 @@ def easyMode(userName, numHeadlines):
         else:
             print()
             print('Incorrect!!')
+            print()
+            print('The correct answer was: ' + gameList[theFakeIndex][:-1])
 
         randomIntForAI = random.randint(1, 3)
         if randomIntForAI == 1:
