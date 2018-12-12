@@ -14,7 +14,7 @@ The application that our group chose was Creative AI, and to make it our own, we
 
 For heuristics, we checked all generated headlines with real headlines that were used as training data, and confirmed that no matches existed If the generated headline matched a real headline, the generated headline is scrapped and remade. Additionally, we used SpaCy to track the part of speech of words while generating headlines to ensure correct grammar.
 
-We used RedditBot to present our game visually and using our praw.ini file anyone can run the program using our bot through our team Reddit account LetsGitEecs183. Each Reddit post is an instance of a game and every response to the post is a round of that game. 
+We used RedditBot to present our game visually and using our praw.ini file anyone can run the program using our bot through our team Reddit account LetsGitEecs183 which can be accessed through the praw folder sent on git. For how the game interacts with Reddit, each Reddit post is an instance of a game and every response to the post is a round of that game. 
 
 We believe that our creativity for the reach flourished not only in our backend implementations that are described above, but primarily in our front-end implementations. Our goal, since the initial proposal, was to make an interactive experience for the user where the user feels like they are playing a game rather than simply running a program. To do this, we implemented a login system for the user so they can play on the same account as many times as they like, with their scores being saved each time. Additionally, users can change their username, and view their stats through the leaderboard. We believe these features allow for a more entertaining experience.
 
