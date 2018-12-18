@@ -1448,7 +1448,7 @@ PROMPT = [
     'Quit the game'
 ]
 
-INSTRUCTIONS = 'Welcome to Commit the Fake. To play the game, please selection option 4.\n\
+INSTRUCTIONS = 'Welcome to Commit to the Fake. To play the game, please selection option 4.\n\
 You will have the option to play a short, medium, long, or very long game.\n\
 A short game will consist of 10 headlines, a medium game will consist of 25 headlines,\n\
 a long game will consist of 50 headlines, and a very long game will consist of 100 headlines.\n\
