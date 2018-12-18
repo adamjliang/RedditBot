@@ -1111,14 +1111,27 @@ def impossibleMode(userName, numHeadlines):
             print()
             print('The correct answer was: ' + gameList[theFakeIndex])
 
-        randomIntForAI = 1
-        if randomIntForAI == 1:
-            numAIRight += 1
-            print('The bot got it right!')
-            print()
+
+        #bot percentage changes based on the difference
+        botDiff = numUserRight - numAIRight
+        if botDiff > 0:
+            randomIntForAI = 1
+            if randomIntForAI == 1:
+                numAIRight += 1
+                print('The bot got it right!')
+                print()
+            else:
+                print('The bot got it wrong!')
+                print()
         else:
-            print('The bot got it wrong!')
-            print()
+            randomIntForAI = random.randint(1, 10)
+            if randomIntForAI < 8:
+                numAIRight += 1
+                print('The bot got it right!')
+                print()
+            else:
+                print('The bot got it wrong!')
+                print()
 
         n += 1
     print('Amount you got right: ' + str(numUserRight))
