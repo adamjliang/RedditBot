@@ -1123,9 +1123,18 @@ def impossibleMode(userName, numHeadlines):
             else:
                 print('The bot got it wrong!')
                 print()
-        else:
+        elif botDiff > -2 and botDiff < 1:
             randomIntForAI = random.randint(1, 10)
             if randomIntForAI < 8:
+                numAIRight += 1
+                print('The bot got it right!')
+                print()
+            else:
+                print('The bot got it wrong!')
+                print()
+        else:
+            randomIntForAI = 1
+            if randomIntForAI == 2:
                 numAIRight += 1
                 print('The bot got it right!')
                 print()
