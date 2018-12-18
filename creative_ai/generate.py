@@ -314,7 +314,7 @@ def beginnerMode(userName, numHeadlines):
         # here the reddit bot will output the titles but ill just do it here for testing
         # Get the top 5 values from our subreddit
         subreddit = reddit.subreddit('eecs183')
-        for submission in subreddit.hot(limit=10):
+        for submission in subreddit.hot(limit=1):
 
             if re.search("Commit to the Fake", submission.title, re.IGNORECASE):
                 # Reply to the post
@@ -695,7 +695,7 @@ def mediumMode(userName, numHeadlines):
         # here the reddit bot will output the titles but ill just do it here for testing
         # Get the top 5 values from our subreddit
         subreddit = reddit.subreddit('eecs183')
-        for submission in subreddit.hot(limit=10):
+        for submission in subreddit.hot(limit=1):
 
             if re.search("Commit to the Fake", submission.title, re.IGNORECASE):
                 # Reply to the post
@@ -888,7 +888,7 @@ def hardMode(userName, numHeadlines):
         # here the reddit bot will output the titles but ill just do it here for testing
         # Get the top 5 values from our subreddit
         subreddit = reddit.subreddit('eecs183')
-        for submission in subreddit.hot(limit=10):
+        for submission in subreddit.hot(limit=1):
 
             if re.search("Commit to the Fake", submission.title, re.IGNORECASE):
                 # Reply to the post
@@ -1081,7 +1081,7 @@ def impossibleMode(userName, numHeadlines):
         # here the reddit bot will output the titles but ill just do it here for testing
         # Get the top 5 values from our subreddit
         subreddit = reddit.subreddit('eecs183')
-        for submission in subreddit.hot(limit=10):
+        for submission in subreddit.hot(limit=1):
 
             if re.search("Commit to the Fake", submission.title, re.IGNORECASE):
                 # Reply to the post
