@@ -271,6 +271,7 @@ def beginnerMode(userName, numHeadlines):
     numAIRight = 0
     percentChanceOfAIGettingItRight = 1.0 / 10.0
     while n < numHeadlines:
+        theFakeIndex = 0
         myString = ''
         # Possibly include myRandomInt
         realLeft = 2
@@ -297,6 +298,7 @@ def beginnerMode(userName, numHeadlines):
                         headlineTrained = True
                     gameList[gameListCount] = runHeadlineGenerator(headlineModel)
                     fakeLeft -= 1
+                    theFakeIndex = gameListCount
             elif realLeft > 0 and fakeLeft == 0:
                 gameList[gameListCount] = myString[:-1]
                 realLeft -= 1
@@ -307,10 +309,21 @@ def beginnerMode(userName, numHeadlines):
                     headlineTrained = True
                 gameList[gameListCount] = runHeadlineGenerator(headlineModel)
                 fakeLeft -= 1
+                theFakeIndex = gameListCount
             gameListCount += 1
         # here the reddit bot will output the titles but ill just do it here for testing
-        print(gameList)
-        print('Choose which one is the fake!! (1/2/3)')
+        # Get the top 5 values from our subreddit
+        subreddit = reddit.subreddit('eecs183')
+        for submission in subreddit.hot(limit=10):
+
+            if re.search("Commit to the Fake", submission.title, re.IGNORECASE):
+                # Reply to the post
+                verses = ['1', '2', '3', '4']
+                submission.reply(
+                    '1) "' + gameList[0] + '",' + '\n' + ' 2) "' + gameList[1] + '",' + '\n' + ' 3) "' + gameList[
+                        2] + '"')
+        # print(gameList)
+        print('Question Number ' + str(n + 1) + ': Choose which one is the fake!! (1/2/3)')
         choice = input('Choice: ')
         while not (choice == '1' or choice == '2' or choice == '3'):
             print('Invalid choice! Choice must be 1, 2, or 3')
@@ -328,6 +341,8 @@ def beginnerMode(userName, numHeadlines):
         else:
             print()
             print('Incorrect!!')
+            print()
+            print('The correct answer was: ' + gameList[theFakeIndex])
 
         randomIntForAI = random.randint(1, 10)
         if randomIntForAI == 1:
@@ -377,11 +392,13 @@ def beginnerMode(userName, numHeadlines):
         if count == 0:
             f = open('leaderboardData.txt', 'a')  # Open file
             f.write(
-                userName + '| Beginner Wins: 1 Easy Wins: 0 Medium Wins: 0 Hard Wins: 0 Impossible Wins: 0 Total Wins: 0 Total Score: ' + str(
+                userName + '| Beginner Wins: 1 Easy Wins: 0 Medium Wins: 0 Hard Wins: 0 Impossible Wins: 0 Total Wins: 1 Total Score: ' + str(
                     totalPointsAdded) + '|' + '\n')  # Write string
             f.close()  # Close the file
+            amountOfTimes = 0
             while not isLeaderboardSorted():
-                sortLeaderboard()
+                sortLeaderboard(amountOfTimes)
+                amountOfTimes += 1
         else:
             # Read file contents
             count = 0
@@ -404,7 +421,13 @@ def beginnerMode(userName, numHeadlines):
                     if aUserName == userName:
                         origTotalScore = ''
                         amountOfBeginnerWinsForThisUser = int(lines[i][len(userName) - 1 + 18])
+                        amountOfEasyWinsForThisUser = int(lines[i][len(userName) - 1 + 31])
+                        amountofMediumWinsForThisUser = int(lines[i][len(userName) - 1 + 46])
+                        amountofHardWinsForThisUser = int(lines[i][len(userName) - 1 + 59])
+                        amountofImpossibleWinsForThisUser = int(lines[i][len(userName) - 1 + 78])
+                        amountofTotalWinsForThisUser = int(lines[i][len(userName) - 1 + 92])
                         amountOfBeginnerWinsForThisUser += 1
+                        amountofTotalWinsForThisUser += 1
                         for letters in lines[i][-8:]:
                             if letters == '0' or letters == '1' or letters == '2' or letters == '3' or letters == '4' \
                                     or letters == '5' or letters == '6' or letters == '7' or letters == '8' or letters == '9':
@@ -412,14 +435,17 @@ def beginnerMode(userName, numHeadlines):
                         intOrigTotalScore = int(origTotalScore)
                         intTotalPointsAdded = int(totalPointsAdded)
                         intTotalPointsAdded += intOrigTotalScore
-                        f.write(userName + '| Beginner Wins: ' + str(amountOfBeginnerWinsForThisUser) + ' Easy Wins: 0 Medium Wins: 0 Hard Wins: 0 Impossible Wins: 0 Total Wins: 0 Total Score: ' + str(
+                        f.write(userName + '| Beginner Wins: ' + str(amountOfBeginnerWinsForThisUser) + ' Easy Wins: ' + str(
+                            amountOfEasyWinsForThisUser) + ' Medium Wins: ' + str(amountofMediumWinsForThisUser) + ' Hard Wins: ' + str(amountofHardWinsForThisUser) + ' Impossible Wins: ' + str(amountofImpossibleWinsForThisUser) + ' Total Wins: ' + str(amountofTotalWinsForThisUser) + ' Total Score: ' + str(
                             intTotalPointsAdded) + '|' + '\n')  # Write string
                     else:
                         f.write(lines[i])
                 i += 1
             f.close()
+            amountOfTimes = 0
             while not isLeaderboardSorted():
-                sortLeaderboard()
+                sortLeaderboard(amountOfTimes)
+                amountOfTimes += 1
     elif numUserRight == numAIRight:
         print('Sorry, you have tied the bot. No points have been added to your total score.')
     else:
@@ -428,14 +454,14 @@ def beginnerMode(userName, numHeadlines):
 def easyMode(userName, numHeadlines):
     print()
     numUserRight = 0
-    #n represent the number of headlines that we went through
+    # n represent the number of headlines that we went through
     n = 0
     numAIRight = 0
-    percentChanceOfAIGettingItRight = 1.0/3.0
+    percentChanceOfAIGettingItRight = 1.0 / 3.0
     while n < numHeadlines:
         theFakeIndex = 0
         myString = ''
-        #Possibly include myRandomInt
+        # Possibly include myRandomInt
         realLeft = 2
         fakeLeft = 1
         gameList = ['', '', '']
@@ -445,7 +471,7 @@ def easyMode(userName, numHeadlines):
         ifstream = open('allHeadlines.txt')
         lines = ifstream.readlines()
         ifstream.close()
-        #populate gameList with one fake and two real headlines, random order
+        # populate gameList with one fake and two real headlines, random order
         while gameListCount < 3:
             myString = lines[random.randint(0, len(lines) - 1)]
             if realLeft > 0 and fakeLeft > 0:
@@ -473,7 +499,7 @@ def easyMode(userName, numHeadlines):
                 fakeLeft -= 1
                 theFakeIndex = gameListCount
             gameListCount += 1
-        #here the reddit bot will output the titles but ill just do it here for testing
+        # here the reddit bot will output the titles but ill just do it here for testing
         # Get the top 5 values from our subreddit
         subreddit = reddit.subreddit('eecs183')
         for submission in subreddit.hot(limit=10):
@@ -481,9 +507,11 @@ def easyMode(userName, numHeadlines):
             if re.search("Commit to the Fake", submission.title, re.IGNORECASE):
                 # Reply to the post
                 verses = ['1', '2', '3', '4']
-                submission.reply('1) "' + gameList[0] + '",' + '\n' + ' 2) "' + gameList[1] + '",' + '\n' + ' 3) "' + gameList[2] + '"')
-        #print(gameList)
-        print('Question Number ' + str(n+1) + ': Choose which one is the fake!! (1/2/3)')
+                submission.reply(
+                    '1) "' + gameList[0] + '",' + '\n' + ' 2) "' + gameList[1] + '",' + '\n' + ' 3) "' + gameList[
+                        2] + '"')
+        # print(gameList)
+        print('Question Number ' + str(n + 1) + ': Choose which one is the fake!! (1/2/3)')
         choice = input('Choice: ')
         while not (choice == '1' or choice == '2' or choice == '3'):
             print('Invalid choice! Choice must be 1, 2, or 3')
@@ -527,7 +555,8 @@ def easyMode(userName, numHeadlines):
         if numHeadlines == 100:
             multiplier = 15
         totalPointsAdded = 1 * multiplier
-        print('Congratulations, you beat the bot! We have added ' + str(totalPointsAdded) +' points to your total score!')
+        print('Congratulations, you beat the bot! We have added ' + str(
+            totalPointsAdded) + ' points to your total score!')
         # Read file contents
         count = 0
         aUserName = ''
@@ -547,13 +576,17 @@ def easyMode(userName, numHeadlines):
                 aUserName = aUserName[:-1]
                 if aUserName == userName:
                     count += 1
-            i+=1
+            i += 1
         if count == 0:
             f = open('leaderboardData.txt', 'a')  # Open file
-            f.write(userName +  '| Beginner Wins: 0 Easy Wins: 1 Medium Wins: 0 Hard Wins: 0 Impossible Wins: 0 Total Wins: 0 Total Score: ' + str(totalPointsAdded) + '|' + '\n')  # Write string
+            f.write(
+                userName + '| Beginner Wins: 0 Easy Wins: 1 Medium Wins: 0 Hard Wins: 0 Impossible Wins: 0 Total Wins: 1 Total Score: ' + str(
+                    totalPointsAdded) + '|' + '\n')  # Write string
             f.close()  # Close the file
+            amountOfTimes = 0
             while not isLeaderboardSorted():
-                sortLeaderboard()
+                sortLeaderboard(amountOfTimes)
+                amountOfTimes += 1
         else:
             # Read file contents
             count = 0
@@ -575,22 +608,37 @@ def easyMode(userName, numHeadlines):
                     aUserName = aUserName[:-1]
                     if aUserName == userName:
                         origTotalScore = ''
+                        amountOfBeginnerWinsForThisUser = int(lines[i][len(userName) - 1 + 18])
                         amountOfEasyWinsForThisUser = int(lines[i][len(userName) - 1 + 31])
+                        amountofMediumWinsForThisUser = int(lines[i][len(userName) - 1 + 46])
+                        amountofHardWinsForThisUser = int(lines[i][len(userName) - 1 + 59])
+                        amountofImpossibleWinsForThisUser = int(lines[i][len(userName) - 1 + 78])
+                        amountofTotalWinsForThisUser = int(lines[i][len(userName) - 1 + 92])
                         amountOfEasyWinsForThisUser += 1
+                        amountofTotalWinsForThisUser += 1
                         for letters in lines[i][-8:]:
-                            if letters == '0' or letters == '1' or letters == '2' or letters == '3' or letters == '4'\
-                            or letters == '5' or letters == '6' or letters == '7' or letters == '8' or letters == '9':
-                                    origTotalScore += letters
+                            if letters == '0' or letters == '1' or letters == '2' or letters == '3' or letters == '4' \
+                                    or letters == '5' or letters == '6' or letters == '7' or letters == '8' or letters == '9':
+                                origTotalScore += letters
                         intOrigTotalScore = int(origTotalScore)
                         intTotalPointsAdded = int(totalPointsAdded)
                         intTotalPointsAdded += intOrigTotalScore
-                        f.write(userName + '| Beginner Wins: 0 Easy Wins: ' + str(amountOfEasyWinsForThisUser) + ' Medium Wins: 0 Hard Wins: 0 Impossible Wins: 0 Total Wins: 0 Total Score: ' + str(intTotalPointsAdded) + '|' + '\n')  # Write string
+                        f.write(userName + '| Beginner Wins: ' + str(
+                            amountOfBeginnerWinsForThisUser) + ' Easy Wins: ' + str(
+                            amountOfEasyWinsForThisUser) + ' Medium Wins: ' + str(
+                            amountofMediumWinsForThisUser) + ' Hard Wins: ' + str(
+                            amountofHardWinsForThisUser) + ' Impossible Wins: ' + str(
+                            amountofImpossibleWinsForThisUser) + ' Total Wins: ' + str(
+                            amountofTotalWinsForThisUser) + ' Total Score: ' + str(
+                            intTotalPointsAdded) + '|' + '\n')  # Write string
                     else:
                         f.write(lines[i])
-                i+=1
+                i += 1
             f.close()
+            amountOfTimes = 0
             while not isLeaderboardSorted():
-                sortLeaderboard()
+                sortLeaderboard(amountOfTimes)
+                amountOfTimes += 1
     elif numUserRight == numAIRight:
         print('Sorry, you have tied the bot. No points have been added to your total score.')
     else:
@@ -599,26 +647,581 @@ def easyMode(userName, numHeadlines):
 def mediumMode(userName, numHeadlines):
     print()
     numUserRight = 0
-    numHeadLinesWentThrough = 0
+    # n represent the number of headlines that we went through
+    n = 0
     numAIRight = 0
-    percentChanceOfAIGettingItRight = 0
-    print('Medium Mode in progress...')
+    percentChanceOfAIGettingItRight = 1.0 / 2.0
+    while n < numHeadlines:
+        theFakeIndex = 0
+        myString = ''
+        # Possibly include myRandomInt
+        realLeft = 2
+        fakeLeft = 1
+        gameList = ['', '', '']
+        gameListCount = 0
+        count = 0
+        i = 0
+        ifstream = open('allHeadlines.txt')
+        lines = ifstream.readlines()
+        ifstream.close()
+        # populate gameList with one fake and two real headlines, random order
+        while gameListCount < 3:
+            myString = lines[random.randint(0, len(lines) - 1)]
+            if realLeft > 0 and fakeLeft > 0:
+                randomInt = random.randint(1, 2)
+                if randomInt == 1:
+                    gameList[gameListCount] = myString[:-1]
+                    realLeft -= 1
+                elif randomInt == 2:
+                    headlineTrained = False
+                    if not headlineTrained:
+                        headlineModel = trainHeadlineModels(TESTLYRICSDIRS)
+                        headlineTrained = True
+                    gameList[gameListCount] = runHeadlineGenerator(headlineModel)
+                    fakeLeft -= 1
+                    theFakeIndex = gameListCount
+            elif realLeft > 0 and fakeLeft == 0:
+                gameList[gameListCount] = myString[:-1]
+                realLeft -= 1
+            elif fakeLeft > 0 and realLeft == 0:
+                headlineTrained = False
+                if not headlineTrained:
+                    headlineModel = trainHeadlineModels(TESTLYRICSDIRS)
+                    headlineTrained = True
+                gameList[gameListCount] = runHeadlineGenerator(headlineModel)
+                fakeLeft -= 1
+                theFakeIndex = gameListCount
+            gameListCount += 1
+        # here the reddit bot will output the titles but ill just do it here for testing
+        # Get the top 5 values from our subreddit
+        subreddit = reddit.subreddit('eecs183')
+        for submission in subreddit.hot(limit=10):
+
+            if re.search("Commit to the Fake", submission.title, re.IGNORECASE):
+                # Reply to the post
+                verses = ['1', '2', '3', '4']
+                submission.reply(
+                    '1) "' + gameList[0] + '",' + '\n' + ' 2) "' + gameList[1] + '",' + '\n' + ' 3) "' + gameList[
+                        2] + '"')
+        # print(gameList)
+        print('Question Number ' + str(n + 1) + ': Choose which one is the fake!! (1/2/3)')
+        choice = input('Choice: ')
+        while not (choice == '1' or choice == '2' or choice == '3'):
+            print('Invalid choice! Choice must be 1, 2, or 3')
+            choice = input('Choice: ')
+
+        while i < len(lines):
+            if gameList[int(choice) - 1] == lines[i][:-1]:
+                count += 1
+            i += 1
+
+        if count == 0:
+            print()
+            print('Correct!!')
+            numUserRight += 1
+        else:
+            print()
+            print('Incorrect!!')
+            print()
+            print('The correct answer was: ' + gameList[theFakeIndex])
+
+        randomIntForAI = random.randint(1, 2)
+        if randomIntForAI == 1:
+            numAIRight += 1
+            print('The bot got it right!')
+            print()
+        else:
+            print('The bot got it wrong!')
+            print()
+
+        n += 1
+    print('Amount you got right: ' + str(numUserRight))
+    print('Amount bot got right: ' + str(numAIRight))
+    if numUserRight > numAIRight:
+        multiplier = 1
+        if numHeadlines == 10:
+            multiplier = 1
+        if numHeadlines == 25:
+            multiplier = 3
+        if numHeadlines == 50:
+            multiplier = 7
+        if numHeadlines == 100:
+            multiplier = 15
+        totalPointsAdded = 3 * multiplier
+        print('Congratulations, you beat the bot! We have added ' + str(
+            totalPointsAdded) + ' points to your total score!')
+        # Read file contents
+        count = 0
+        aUserName = ''
+        ifstream = open('leaderboardData.txt')
+        lines = ifstream.readlines()
+        ifstream.close()
+        # print(len(lines)) prints the amount of lines in the the txt file
+        i = 0
+        while i < len(lines):
+            # not needed but might wack up the indent
+            if count == 0:
+                aUserName = ''
+                while '|' not in aUserName:
+                    for letters in lines[i]:
+                        if '|' not in aUserName:
+                            aUserName = aUserName + letters
+                aUserName = aUserName[:-1]
+                if aUserName == userName:
+                    count += 1
+            i += 1
+        if count == 0:
+            f = open('leaderboardData.txt', 'a')  # Open file
+            f.write(
+                userName + '| Beginner Wins: 0 Easy Wins: 0 Medium Wins: 1 Hard Wins: 0 Impossible Wins: 0 Total Wins: 1 Total Score: ' + str(
+                    totalPointsAdded) + '|' + '\n')  # Write string
+            f.close()  # Close the file
+            amountOfTimes = 0
+            while not isLeaderboardSorted():
+                sortLeaderboard(amountOfTimes)
+                amountOfTimes += 1
+        else:
+            # Read file contents
+            count = 0
+            aUserName = ''
+            ifstream = open('leaderboardData.txt')
+            lines = ifstream.readlines()
+            ifstream.close()
+            # print(len(lines)) prints the amount of lines in the the txt file
+            i = 0
+            f = open('leaderboardData.txt', 'w')  # Open file
+            while i < len(lines):
+                # not needed but might wack up the indent
+                if count == 0:
+                    aUserName = ''
+                    while '|' not in aUserName:
+                        for letters in lines[i]:
+                            if '|' not in aUserName:
+                                aUserName = aUserName + letters
+                    aUserName = aUserName[:-1]
+                    if aUserName == userName:
+                        origTotalScore = ''
+                        amountOfBeginnerWinsForThisUser = int(lines[i][len(userName) - 1 + 18])
+                        amountOfEasyWinsForThisUser = int(lines[i][len(userName) - 1 + 31])
+                        amountofMediumWinsForThisUser = int(lines[i][len(userName) - 1 + 46])
+                        amountofHardWinsForThisUser = int(lines[i][len(userName) - 1 + 59])
+                        amountofImpossibleWinsForThisUser = int(lines[i][len(userName) - 1 + 78])
+                        amountofTotalWinsForThisUser = int(lines[i][len(userName) - 1 + 92])
+                        amountofMediumWinsForThisUser += 1
+                        amountofTotalWinsForThisUser += 1
+                        for letters in lines[i][-8:]:
+                            if letters == '0' or letters == '1' or letters == '2' or letters == '3' or letters == '4' \
+                                    or letters == '5' or letters == '6' or letters == '7' or letters == '8' or letters == '9':
+                                origTotalScore += letters
+                        intOrigTotalScore = int(origTotalScore)
+                        intTotalPointsAdded = int(totalPointsAdded)
+                        intTotalPointsAdded += intOrigTotalScore
+                        f.write(userName + '| Beginner Wins: ' + str(
+                            amountOfBeginnerWinsForThisUser) + ' Easy Wins: ' + str(
+                            amountOfEasyWinsForThisUser) + ' Medium Wins: ' + str(
+                            amountofMediumWinsForThisUser) + ' Hard Wins: ' + str(
+                            amountofHardWinsForThisUser) + ' Impossible Wins: ' + str(
+                            amountofImpossibleWinsForThisUser) + ' Total Wins: ' + str(
+                            amountofTotalWinsForThisUser) + ' Total Score: ' + str(
+                            intTotalPointsAdded) + '|' + '\n')  # Write string
+                    else:
+                        f.write(lines[i])
+                i += 1
+            f.close()
+            amountOfTimes = 0
+            while not isLeaderboardSorted():
+                sortLeaderboard(amountOfTimes)
+                amountOfTimes += 1
+    elif numUserRight == numAIRight:
+        print('Sorry, you have tied the bot. No points have been added to your total score.')
+    else:
+        print('Sorry, you lost to the bot. No points have been added to your total score')
 
 def hardMode(userName, numHeadlines):
     print()
     numUserRight = 0
-    numHeadLinesWentThrough = 0
+    # n represent the number of headlines that we went through
+    n = 0
     numAIRight = 0
-    percentChanceOfAIGettingItRight = 0
-    print('Hard Mode in progress...')
+    percentChanceOfAIGettingItRight = 1.0 / 2.0
+    while n < numHeadlines:
+        theFakeIndex = 0
+        myString = ''
+        # Possibly include myRandomInt
+        realLeft = 2
+        fakeLeft = 1
+        gameList = ['', '', '']
+        gameListCount = 0
+        count = 0
+        i = 0
+        ifstream = open('allHeadlines.txt')
+        lines = ifstream.readlines()
+        ifstream.close()
+        # populate gameList with one fake and two real headlines, random order
+        while gameListCount < 3:
+            myString = lines[random.randint(0, len(lines) - 1)]
+            if realLeft > 0 and fakeLeft > 0:
+                randomInt = random.randint(1, 2)
+                if randomInt == 1:
+                    gameList[gameListCount] = myString[:-1]
+                    realLeft -= 1
+                elif randomInt == 2:
+                    headlineTrained = False
+                    if not headlineTrained:
+                        headlineModel = trainHeadlineModels(TESTLYRICSDIRS)
+                        headlineTrained = True
+                    gameList[gameListCount] = runHeadlineGenerator(headlineModel)
+                    fakeLeft -= 1
+                    theFakeIndex = gameListCount
+            elif realLeft > 0 and fakeLeft == 0:
+                gameList[gameListCount] = myString[:-1]
+                realLeft -= 1
+            elif fakeLeft > 0 and realLeft == 0:
+                headlineTrained = False
+                if not headlineTrained:
+                    headlineModel = trainHeadlineModels(TESTLYRICSDIRS)
+                    headlineTrained = True
+                gameList[gameListCount] = runHeadlineGenerator(headlineModel)
+                fakeLeft -= 1
+                theFakeIndex = gameListCount
+            gameListCount += 1
+        # here the reddit bot will output the titles but ill just do it here for testing
+        # Get the top 5 values from our subreddit
+        subreddit = reddit.subreddit('eecs183')
+        for submission in subreddit.hot(limit=10):
+
+            if re.search("Commit to the Fake", submission.title, re.IGNORECASE):
+                # Reply to the post
+                verses = ['1', '2', '3', '4']
+                submission.reply(
+                    '1) "' + gameList[0] + '",' + '\n' + ' 2) "' + gameList[1] + '",' + '\n' + ' 3) "' + gameList[
+                        2] + '"')
+        # print(gameList)
+        print('Question Number ' + str(n + 1) + ': Choose which one is the fake!! (1/2/3)')
+        choice = input('Choice: ')
+        while not (choice == '1' or choice == '2' or choice == '3'):
+            print('Invalid choice! Choice must be 1, 2, or 3')
+            choice = input('Choice: ')
+
+        while i < len(lines):
+            if gameList[int(choice) - 1] == lines[i][:-1]:
+                count += 1
+            i += 1
+
+        if count == 0:
+            print()
+            print('Correct!!')
+            numUserRight += 1
+        else:
+            print()
+            print('Incorrect!!')
+            print()
+            print('The correct answer was: ' + gameList[theFakeIndex])
+
+        randomIntForAI = random.randint(1, 2)
+        if randomIntForAI == 1:
+            numAIRight += 1
+            print('The bot got it right!')
+            print()
+        else:
+            print('The bot got it wrong!')
+            print()
+
+        n += 1
+    print('Amount you got right: ' + str(numUserRight))
+    print('Amount bot got right: ' + str(numAIRight))
+    if numUserRight > numAIRight:
+        multiplier = 1
+        if numHeadlines == 10:
+            multiplier = 1
+        if numHeadlines == 25:
+            multiplier = 3
+        if numHeadlines == 50:
+            multiplier = 7
+        if numHeadlines == 100:
+            multiplier = 15
+        totalPointsAdded = 5 * multiplier
+        print('Congratulations, you beat the bot! We have added ' + str(
+            totalPointsAdded) + ' points to your total score!')
+        # Read file contents
+        count = 0
+        aUserName = ''
+        ifstream = open('leaderboardData.txt')
+        lines = ifstream.readlines()
+        ifstream.close()
+        # print(len(lines)) prints the amount of lines in the the txt file
+        i = 0
+        while i < len(lines):
+            # not needed but might wack up the indent
+            if count == 0:
+                aUserName = ''
+                while '|' not in aUserName:
+                    for letters in lines[i]:
+                        if '|' not in aUserName:
+                            aUserName = aUserName + letters
+                aUserName = aUserName[:-1]
+                if aUserName == userName:
+                    count += 1
+            i += 1
+        if count == 0:
+            f = open('leaderboardData.txt', 'a')  # Open file
+            f.write(
+                userName + '| Beginner Wins: 0 Easy Wins: 0 Medium Wins: 0 Hard Wins: 1 Impossible Wins: 0 Total Wins: 1 Total Score: ' + str(
+                    totalPointsAdded) + '|' + '\n')  # Write string
+            f.close()  # Close the file
+            amountOfTimes = 0
+            while not isLeaderboardSorted():
+                sortLeaderboard(amountOfTimes)
+                amountOfTimes += 1
+        else:
+            # Read file contents
+            count = 0
+            aUserName = ''
+            ifstream = open('leaderboardData.txt')
+            lines = ifstream.readlines()
+            ifstream.close()
+            # print(len(lines)) prints the amount of lines in the the txt file
+            i = 0
+            f = open('leaderboardData.txt', 'w')  # Open file
+            while i < len(lines):
+                # not needed but might wack up the indent
+                if count == 0:
+                    aUserName = ''
+                    while '|' not in aUserName:
+                        for letters in lines[i]:
+                            if '|' not in aUserName:
+                                aUserName = aUserName + letters
+                    aUserName = aUserName[:-1]
+                    if aUserName == userName:
+                        origTotalScore = ''
+                        amountOfBeginnerWinsForThisUser = int(lines[i][len(userName) - 1 + 18])
+                        amountOfEasyWinsForThisUser = int(lines[i][len(userName) - 1 + 31])
+                        amountofMediumWinsForThisUser = int(lines[i][len(userName) - 1 + 46])
+                        amountofHardWinsForThisUser = int(lines[i][len(userName) - 1 + 59])
+                        amountofImpossibleWinsForThisUser = int(lines[i][len(userName) - 1 + 78])
+                        amountofTotalWinsForThisUser = int(lines[i][len(userName) - 1 + 92])
+                        amountofHardWinsForThisUser += 1
+                        amountofTotalWinsForThisUser += 1
+                        for letters in lines[i][-8:]:
+                            if letters == '0' or letters == '1' or letters == '2' or letters == '3' or letters == '4' \
+                                    or letters == '5' or letters == '6' or letters == '7' or letters == '8' or letters == '9':
+                                origTotalScore += letters
+                        intOrigTotalScore = int(origTotalScore)
+                        intTotalPointsAdded = int(totalPointsAdded)
+                        intTotalPointsAdded += intOrigTotalScore
+                        f.write(userName + '| Beginner Wins: ' + str(
+                            amountOfBeginnerWinsForThisUser) + ' Easy Wins: ' + str(
+                            amountOfEasyWinsForThisUser) + ' Medium Wins: ' + str(
+                            amountofMediumWinsForThisUser) + ' Hard Wins: ' + str(
+                            amountofHardWinsForThisUser) + ' Impossible Wins: ' + str(
+                            amountofImpossibleWinsForThisUser) + ' Total Wins: ' + str(
+                            amountofTotalWinsForThisUser) + ' Total Score: ' + str(
+                            intTotalPointsAdded) + '|' + '\n')  # Write string
+                    else:
+                        f.write(lines[i])
+                i += 1
+            f.close()
+            amountOfTimes = 0
+            while not isLeaderboardSorted():
+                sortLeaderboard(amountOfTimes)
+                amountOfTimes += 1
+    elif numUserRight == numAIRight:
+        print('Sorry, you have tied the bot. No points have been added to your total score.')
+    else:
+        print('Sorry, you lost to the bot. No points have been added to your total score')
 
 def impossibleMode(userName, numHeadlines):
     print()
     numUserRight = 0
-    numHeadLinesWentThrough = 0
+    # n represent the number of headlines that we went through
+    n = 0
     numAIRight = 0
-    percentChanceOfAIGettingItRight = 0
-    print('Impossible Mode in progress...')
+    percentChanceOfAIGettingItRight = 1.0 / 2.0
+    while n < numHeadlines:
+        theFakeIndex = 0
+        myString = ''
+        # Possibly include myRandomInt
+        realLeft = 2
+        fakeLeft = 1
+        gameList = ['', '', '']
+        gameListCount = 0
+        count = 0
+        i = 0
+        ifstream = open('allHeadlines.txt')
+        lines = ifstream.readlines()
+        ifstream.close()
+        # populate gameList with one fake and two real headlines, random order
+        while gameListCount < 3:
+            myString = lines[random.randint(0, len(lines) - 1)]
+            if realLeft > 0 and fakeLeft > 0:
+                randomInt = random.randint(1, 2)
+                if randomInt == 1:
+                    gameList[gameListCount] = myString[:-1]
+                    realLeft -= 1
+                elif randomInt == 2:
+                    headlineTrained = False
+                    if not headlineTrained:
+                        headlineModel = trainHeadlineModels(TESTLYRICSDIRS)
+                        headlineTrained = True
+                    gameList[gameListCount] = runHeadlineGenerator(headlineModel)
+                    fakeLeft -= 1
+                    theFakeIndex = gameListCount
+            elif realLeft > 0 and fakeLeft == 0:
+                gameList[gameListCount] = myString[:-1]
+                realLeft -= 1
+            elif fakeLeft > 0 and realLeft == 0:
+                headlineTrained = False
+                if not headlineTrained:
+                    headlineModel = trainHeadlineModels(TESTLYRICSDIRS)
+                    headlineTrained = True
+                gameList[gameListCount] = runHeadlineGenerator(headlineModel)
+                fakeLeft -= 1
+                theFakeIndex = gameListCount
+            gameListCount += 1
+        # here the reddit bot will output the titles but ill just do it here for testing
+        # Get the top 5 values from our subreddit
+        subreddit = reddit.subreddit('eecs183')
+        for submission in subreddit.hot(limit=10):
+
+            if re.search("Commit to the Fake", submission.title, re.IGNORECASE):
+                # Reply to the post
+                verses = ['1', '2', '3', '4']
+                submission.reply(
+                    '1) "' + gameList[0] + '",' + '\n' + ' 2) "' + gameList[1] + '",' + '\n' + ' 3) "' + gameList[
+                        2] + '"')
+        # print(gameList)
+        print('Question Number ' + str(n + 1) + ': Choose which one is the fake!! (1/2/3)')
+        choice = input('Choice: ')
+        while not (choice == '1' or choice == '2' or choice == '3'):
+            print('Invalid choice! Choice must be 1, 2, or 3')
+            choice = input('Choice: ')
+
+        while i < len(lines):
+            if gameList[int(choice) - 1] == lines[i][:-1]:
+                count += 1
+            i += 1
+
+        if count == 0:
+            print()
+            print('Correct!!')
+            numUserRight += 1
+        else:
+            print()
+            print('Incorrect!!')
+            print()
+            print('The correct answer was: ' + gameList[theFakeIndex])
+
+        randomIntForAI = random.randint(1, 2)
+        if randomIntForAI == 1:
+            numAIRight += 1
+            print('The bot got it right!')
+            print()
+        else:
+            print('The bot got it wrong!')
+            print()
+
+        n += 1
+    print('Amount you got right: ' + str(numUserRight))
+    print('Amount bot got right: ' + str(numAIRight))
+    if numUserRight > numAIRight:
+        multiplier = 1
+        if numHeadlines == 10:
+            multiplier = 1
+        if numHeadlines == 25:
+            multiplier = 3
+        if numHeadlines == 50:
+            multiplier = 7
+        if numHeadlines == 100:
+            multiplier = 15
+        totalPointsAdded = 10000 * multiplier
+        print('Congratulations, you beat the bot! We have added ' + str(
+            totalPointsAdded) + ' points to your total score!')
+        # Read file contents
+        count = 0
+        aUserName = ''
+        ifstream = open('leaderboardData.txt')
+        lines = ifstream.readlines()
+        ifstream.close()
+        # print(len(lines)) prints the amount of lines in the the txt file
+        i = 0
+        while i < len(lines):
+            # not needed but might wack up the indent
+            if count == 0:
+                aUserName = ''
+                while '|' not in aUserName:
+                    for letters in lines[i]:
+                        if '|' not in aUserName:
+                            aUserName = aUserName + letters
+                aUserName = aUserName[:-1]
+                if aUserName == userName:
+                    count += 1
+            i += 1
+        if count == 0:
+            f = open('leaderboardData.txt', 'a')  # Open file
+            f.write(
+                userName + '| Beginner Wins: 0 Easy Wins: 0 Medium Wins: 0 Hard Wins: 0 Impossible Wins: 1 Total Wins: 1 Total Score: ' + str(
+                    totalPointsAdded) + '|' + '\n')  # Write string
+            f.close()  # Close the file
+            amountOfTimes = 0
+            while not isLeaderboardSorted():
+                sortLeaderboard(amountOfTimes)
+                amountOfTimes += 1
+        else:
+            # Read file contents
+            count = 0
+            aUserName = ''
+            ifstream = open('leaderboardData.txt')
+            lines = ifstream.readlines()
+            ifstream.close()
+            # print(len(lines)) prints the amount of lines in the the txt file
+            i = 0
+            f = open('leaderboardData.txt', 'w')  # Open file
+            while i < len(lines):
+                # not needed but might wack up the indent
+                if count == 0:
+                    aUserName = ''
+                    while '|' not in aUserName:
+                        for letters in lines[i]:
+                            if '|' not in aUserName:
+                                aUserName = aUserName + letters
+                    aUserName = aUserName[:-1]
+                    if aUserName == userName:
+                        origTotalScore = ''
+                        amountOfBeginnerWinsForThisUser = int(lines[i][len(userName) - 1 + 18])
+                        amountOfEasyWinsForThisUser = int(lines[i][len(userName) - 1 + 31])
+                        amountofMediumWinsForThisUser = int(lines[i][len(userName) - 1 + 46])
+                        amountofHardWinsForThisUser = int(lines[i][len(userName) - 1 + 59])
+                        amountofImpossibleWinsForThisUser = int(lines[i][len(userName) - 1 + 78])
+                        amountofTotalWinsForThisUser = int(lines[i][len(userName) - 1 + 92])
+                        amountofImpossibleWinsForThisUser += 1
+                        amountofTotalWinsForThisUser += 1
+                        for letters in lines[i][-8:]:
+                            if letters == '0' or letters == '1' or letters == '2' or letters == '3' or letters == '4' \
+                                    or letters == '5' or letters == '6' or letters == '7' or letters == '8' or letters == '9':
+                                origTotalScore += letters
+                        intOrigTotalScore = int(origTotalScore)
+                        intTotalPointsAdded = int(totalPointsAdded)
+                        intTotalPointsAdded += intOrigTotalScore
+                        f.write(userName + '| Beginner Wins: ' + str(
+                            amountOfBeginnerWinsForThisUser) + ' Easy Wins: ' + str(
+                            amountOfEasyWinsForThisUser) + ' Medium Wins: ' + str(
+                            amountofMediumWinsForThisUser) + ' Hard Wins: ' + str(
+                            amountofHardWinsForThisUser) + ' Impossible Wins: ' + str(
+                            amountofImpossibleWinsForThisUser) + ' Total Wins: ' + str(
+                            amountofTotalWinsForThisUser) + ' Total Score: ' + str(
+                            intTotalPointsAdded) + '|' + '\n')  # Write string
+                    else:
+                        f.write(lines[i])
+                i += 1
+            f.close()
+            amountOfTimes = 0
+            while not isLeaderboardSorted():
+                sortLeaderboard(amountOfTimes)
+                amountOfTimes += 1
+    elif numUserRight == numAIRight:
+        print('Sorry, you have tied the bot. No points have been added to your total score.')
+    else:
+        print('Sorry, you lost to the bot. No points have been added to your total score')
 
 def userNamePrompt():
     print()
@@ -742,7 +1345,7 @@ def __reset_colors(n):
     # default \e[49m \e[39m
     return '\033[49;39m'
 
-def sortLeaderboard():
+def sortLeaderboard(amountofTimes):
     '''
      Requires: leaderboardData.txt is in the proper format
      Modifies: leaderboardData.txt
@@ -778,8 +1381,11 @@ def sortLeaderboard():
             stringLine = stringLinePlusOne
             stringLinePlusOne = temp
             linesToSeeTotalScore[i] = stringLine
+            if amountofTimes == 0:
+                linesToSeeTotalScore[i] += '\n'
             linesToSeeTotalScore[i+1] = stringLinePlusOne
         i += 1
+        amountofTimes += 1
     i = 0
     print(len(linesToSeeTotalScore))
     f = open('leaderboardData.txt', 'w')  # Open file
