@@ -502,7 +502,7 @@ def easyMode(userName, numHeadlines):
         # here the reddit bot will output the titles but ill just do it here for testing
         # Get the top 5 values from our subreddit
         subreddit = reddit.subreddit('eecs183')
-        for submission in subreddit.hot(limit=10):
+        for submission in subreddit.hot(limit=1):
 
             if re.search("Commit to the Fake", submission.title, re.IGNORECASE):
                 # Reply to the post
@@ -918,8 +918,8 @@ def hardMode(userName, numHeadlines):
             print()
             print('The correct answer was: ' + gameList[theFakeIndex])
 
-        randomIntForAI = random.randint(1, 2)
-        if randomIntForAI == 1:
+        randomIntForAI = random.randint(1, 10)
+        if randomIntForAI < 8:
             numAIRight += 1
             print('The bot got it right!')
             print()
@@ -1111,7 +1111,7 @@ def impossibleMode(userName, numHeadlines):
             print()
             print('The correct answer was: ' + gameList[theFakeIndex])
 
-        randomIntForAI = random.randint(1, 2)
+        randomIntForAI = 1
         if randomIntForAI == 1:
             numAIRight += 1
             print('The bot got it right!')
