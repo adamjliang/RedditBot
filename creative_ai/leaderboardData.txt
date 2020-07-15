@@ -1,3 +1,4 @@
+harpreet| Beginner Wins: 0 Easy Wins: 0 Medium Wins: 1 Hard Wins: 0 Impossible Wins: 0 Total Wins: 1 Total Score: 3|
 CPU1| Beginner Wins: 0 Easy Wins: 1 Medium Wins: 0 Hard Wins: 0 Impossible Wins: 0 Total Wins: 0 Total Score: 1
 CPU2| Beginner Wins: 0 Easy Wins: 1 Medium Wins: 0 Hard Wins: 0 Impossible Wins: 0 Total Wins: 0 Total Score: 1
 CPU3| Beginner Wins: 0 Easy Wins: 1 Medium Wins: 0 Hard Wins: 0 Impossible Wins: 0 Total Wins: 0 Total Score: 1
@@ -9,3 +10,5 @@ CPU8| Beginner Wins: 0 Easy Wins: 1 Medium Wins: 0 Hard Wins: 0 Impossible Wins:
 CPU9| Beginner Wins: 0 Easy Wins: 1 Medium Wins: 0 Hard Wins: 0 Impossible Wins: 0 Total Wins: 0 Total Score: 1
 CPU10| Beginner Wins: 0 Easy Wins: 1 Medium Wins: 0 Hard Wins: 0 Impossible Wins: 0 Total Wins: 0 Total Score: 1
 CPU11| Beginner Wins: 0 Easy Wins: 1 Medium Wins: 0 Hard Wins: 0 Impossible Wins: 0 Total Wins: 0 Total Score: 1
+Lendonus| Beginner Wins: 0 Easy Wins: 1 Medium Wins: 0 Hard Wins: 0 Impossible Wins: 0 Total Wins: 1 Total Score: 1|
+bryanlaw| Beginner Wins: 1 Easy Wins: 0 Medium Wins: 0 Hard Wins: 0 Impossible Wins: 0 Total Wins: 1 Total Score: 0|

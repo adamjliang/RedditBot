@@ -1409,7 +1409,6 @@ def sortLeaderboard(amountofTimes):
         i += 1
         amountofTimes += 1
     i = 0
-    print(len(linesToSeeTotalScore))
     f = open('leaderboardData.txt', 'w')  # Open file
     while i < len(linesToSeeTotalScore):
         f.write(linesToSeeTotalScore[i])  # Write string
